@@ -1,0 +1,465 @@
+{%- style -%}
+  .page-type-index .header-wrapper,
+  .page-type-index .shopify-section-group-footer-group {
+    display: none !important;
+  }
+
+  .app-storyboard {
+    --story-accent: {{ section.settings.accent_color }};
+    --story-ink: #25262b;
+    --story-shadow: 0 24px 80px rgba(27, 20, 75, 0.18);
+    background: #ffffff;
+    font-family: 'Manrope', sans-serif;
+  }
+
+  .app-storyboard__slide {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    min-height: 100vh;
+  }
+
+  .app-storyboard__panel {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(3.2rem, 6vw, 5.6rem);
+    display: flex;
+    align-items: center;
+  }
+
+  .app-storyboard__panel--light {
+    background:
+      linear-gradient(128deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.96) 100%),
+      repeating-linear-gradient(140deg, transparent 0, transparent 7.4rem, rgba(76, 63, 143, 0.045) 7.4rem, rgba(76, 63, 143, 0.045) 12rem);
+    color: var(--story-ink);
+  }
+
+  .app-storyboard__panel--dark {
+    background: var(--story-accent);
+    color: #ffffff;
+    justify-content: center;
+  }
+
+  .app-storyboard__panel-inner {
+    width: 100%;
+    max-width: 56rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .app-storyboard__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.4rem;
+    margin-bottom: clamp(3rem, 8vw, 5rem);
+    color: inherit;
+  }
+
+  .app-storyboard__brand-mark {
+    width: 5.2rem;
+    height: 5.2rem;
+    border-radius: 50%;
+    background: #2b2b2b;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
+
+  .app-storyboard__brand-mark--dark-surface {
+    background: #ffffff;
+  }
+
+  .app-storyboard__brand-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .app-storyboard__brand-mark svg {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  .app-storyboard__brand-text {
+    font-size: clamp(2rem, 2vw, 2.6rem);
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+
+  .app-storyboard__content {
+    max-width: 50rem;
+  }
+
+  .app-storyboard__eyebrow {
+    display: inline-block;
+    margin-bottom: 1.8rem;
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.65;
+  }
+
+  .app-storyboard__title {
+    margin: 0 0 3rem;
+    font-size: clamp(4.8rem, 5vw, 7rem);
+    line-height: 0.98;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    color: inherit;
+    white-space: pre-line;
+  }
+
+  .app-storyboard__label {
+    margin: 0 0 2.4rem;
+    font-size: clamp(2.4rem, 3vw, 3.6rem);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+  }
+
+  .app-storyboard__points {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 2rem;
+  }
+
+  .app-storyboard__point {
+    font-size: clamp(2rem, 2.2vw, 2.7rem);
+    line-height: 1.45;
+    font-weight: 500;
+    color: rgba(37, 38, 43, 0.95);
+  }
+
+  .app-storyboard__point-index {
+    font-weight: 800;
+  }
+
+  .app-storyboard__media-wrap {
+    position: relative;
+    width: min(100%, 84rem);
+    margin: 0 auto;
+  }
+
+  .app-storyboard__media-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 1.6rem;
+    padding: 1.4rem;
+    box-shadow: var(--story-shadow);
+  }
+
+  .app-storyboard__media-frame {
+    overflow: hidden;
+    border-radius: 1.1rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(246, 246, 246, 0.95));
+    border: 1px solid rgba(15, 15, 15, 0.06);
+    min-height: 26rem;
+  }
+
+  .app-storyboard__media-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .app-storyboard__placeholder {
+    min-height: 26rem;
+    display: grid;
+    place-items: center;
+    padding: 4rem;
+    text-align: center;
+    color: rgba(37, 38, 43, 0.55);
+  }
+
+  .app-storyboard__placeholder strong {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-size: 2rem;
+    color: rgba(37, 38, 43, 0.86);
+  }
+
+  .app-storyboard__decor {
+    position: absolute;
+    width: clamp(6rem, 10vw, 10rem);
+    opacity: 0.95;
+  }
+
+  .app-storyboard__decor--top-right {
+    top: 3.2rem;
+    right: 3.2rem;
+  }
+
+  .app-storyboard__decor--bottom-left {
+    left: 3.2rem;
+    bottom: 3.2rem;
+  }
+
+  .app-storyboard__decor path {
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.5;
+  }
+
+  .app-storyboard__panel--light .app-storyboard__decor {
+    color: var(--story-accent);
+  }
+
+  .app-storyboard__panel--dark .app-storyboard__decor {
+    color: #ffffff;
+  }
+
+  .app-storyboard__slide--media-left .app-storyboard__panel--dark {
+    order: -1;
+  }
+
+  @media screen and (max-width: 989px) {
+    .app-storyboard__slide,
+    .app-storyboard__slide--media-left {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+
+    .app-storyboard__slide--media-left .app-storyboard__panel--dark {
+      order: 0;
+    }
+
+    .app-storyboard__panel {
+      min-height: auto;
+      padding: 3.2rem 2.2rem;
+    }
+
+    .app-storyboard__panel--light {
+      order: 1;
+    }
+
+    .app-storyboard__panel--dark {
+      order: 2;
+    }
+
+    .app-storyboard__brand {
+      margin-bottom: 2.8rem;
+    }
+
+    .app-storyboard__title {
+      font-size: clamp(3.8rem, 10vw, 5.2rem);
+    }
+
+    .app-storyboard__label {
+      font-size: clamp(2rem, 7vw, 3rem);
+    }
+
+    .app-storyboard__point {
+      font-size: clamp(1.8rem, 5vw, 2.3rem);
+    }
+
+    .app-storyboard__media-card {
+      padding: 1rem;
+    }
+
+    .app-storyboard__decor--top-right {
+      top: 2rem;
+      right: 2rem;
+    }
+
+    .app-storyboard__decor--bottom-left {
+      left: 2rem;
+      bottom: 2rem;
+    }
+  }
+{%- endstyle -%}
+
+{%- capture app_storyboard_chevrons -%}
+  <svg viewBox="0 0 74 28" aria-hidden="true" focusable="false">
+    <path d="M17 2L3 14L17 26" />
+    <path d="M39 2L25 14L39 26" />
+    <path d="M61 2L47 14L61 26" />
+  </svg>
+{%- endcapture -%}
+
+<section class="app-storyboard">
+  {%- for block in section.blocks -%}
+    {%- assign bullet_items = block.settings.points | newline_to_br | split: '<br />' -%}
+    <div class="app-storyboard__slide {% if block.settings.media_position == 'left' %}app-storyboard__slide--media-left{% endif %}" {{ block.shopify_attributes }}>
+      <div class="app-storyboard__panel app-storyboard__panel--light">
+        <div class="app-storyboard__panel-inner">
+          {%- unless block.settings.media_position == 'left' -%}
+            <div class="app-storyboard__brand">
+              <span class="app-storyboard__brand-mark">
+                {%- if section.settings.app_logo != blank -%}
+                  {{ section.settings.app_logo | image_url: width: 120 | image_tag: loading: 'lazy', widths: '60, 90, 120' }}
+                {%- else -%}
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="6" r="2" fill="#ffffff"/>
+                    <circle cx="6" cy="10" r="2" fill="#ffffff"/>
+                    <circle cx="18" cy="10" r="2" fill="#ffffff"/>
+                    <path d="M12 8v5M6 12l6 3 6-3M8 18h8" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                {%- endif -%}
+              </span>
+              <span class="app-storyboard__brand-text">{{ section.settings.app_name | escape }}</span>
+            </div>
+          {%- endunless -%}
+
+          <div class="app-storyboard__content">
+            {%- if block.settings.eyebrow != blank -%}
+              <span class="app-storyboard__eyebrow">{{ block.settings.eyebrow }}</span>
+            {%- endif -%}
+            <h2 class="app-storyboard__title">{{ block.settings.title | escape }}</h2>
+            {%- if block.settings.label != blank -%}
+              <p class="app-storyboard__label">{{ block.settings.label | escape }}</p>
+            {%- endif -%}
+
+            {%- if bullet_items.size > 0 -%}
+              <ol class="app-storyboard__points">
+                {%- for item in bullet_items -%}
+                  {%- assign clean_item = item | strip -%}
+                  {%- if clean_item != blank -%}
+                    <li class="app-storyboard__point">
+                      <span class="app-storyboard__point-index">{{ forloop.index }}.</span>
+                      {{ clean_item }}
+                    </li>
+                  {%- endif -%}
+                {%- endfor -%}
+              </ol>
+            {%- endif -%}
+          </div>
+        </div>
+
+        <div class="app-storyboard__decor app-storyboard__decor--bottom-left">
+          {{ app_storyboard_chevrons }}
+        </div>
+      </div>
+
+      <div class="app-storyboard__panel app-storyboard__panel--dark">
+        <div class="app-storyboard__panel-inner">
+          {%- if block.settings.media_position == 'left' -%}
+            <div class="app-storyboard__brand">
+              <span class="app-storyboard__brand-mark app-storyboard__brand-mark--dark-surface">
+                {%- if section.settings.app_logo != blank -%}
+                  {{ section.settings.app_logo | image_url: width: 120 | image_tag: loading: 'lazy', widths: '60, 90, 120' }}
+                {%- else -%}
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="6" r="2" fill="#2b2b2b"/>
+                    <circle cx="6" cy="10" r="2" fill="#2b2b2b"/>
+                    <circle cx="18" cy="10" r="2" fill="#2b2b2b"/>
+                    <path d="M12 8v5M6 12l6 3 6-3M8 18h8" stroke="#2b2b2b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                {%- endif -%}
+              </span>
+              <span class="app-storyboard__brand-text">{{ section.settings.app_name | escape }}</span>
+            </div>
+          {%- endif -%}
+
+          <div class="app-storyboard__media-wrap">
+            <div class="app-storyboard__media-card">
+              <div class="app-storyboard__media-frame">
+                {%- if block.settings.image != blank -%}
+                  {{ block.settings.image | image_url: width: 1600 | image_tag: loading: 'lazy', widths: '550, 750, 1100, 1500, 1600' }}
+                {%- else -%}
+                  <div class="app-storyboard__placeholder">
+                    <div>
+                      <strong>Screenshot slot</strong>
+                      Upload this slide's app screenshot from the theme editor to match your provided design.
+                    </div>
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-storyboard__decor app-storyboard__decor--top-right">
+          {{ app_storyboard_chevrons }}
+        </div>
+      </div>
+    </div>
+  {%- endfor -%}
+</section>
+
+{% schema %}
+{
+  "name": "App storyboard",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 8,
+  "settings": [
+    {
+      "type": "text",
+      "id": "app_name",
+      "label": "App name",
+      "default": "Group & Bundle Product"
+    },
+    {
+      "type": "image_picker",
+      "id": "app_logo",
+      "label": "App logo"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#544a93"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "select",
+          "id": "media_position",
+          "label": "Screenshot position",
+          "default": "right",
+          "options": [
+            { "value": "right", "label": "Right" },
+            { "value": "left", "label": "Left" }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Eyebrow",
+          "default": "App overview"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Bundle Product"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Subtitle",
+          "default": "App Features:"
+        },
+        {
+          "type": "textarea",
+          "id": "points",
+          "label": "Points",
+          "default": "Add & customize product options easily.\nCreate either bundle or group products.\nSearch, add, delete, and reorder products.\nSet default selections.\nLet customers adjust quantities."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Screenshot"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "App storyboard"
+    }
+  ]
+}
+{% endschema %}
