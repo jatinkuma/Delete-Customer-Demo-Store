@@ -20,7 +20,7 @@
             "title": "Bundle Product",
             "label": "App Features:",
             "points": "Add & customize product options easily.\nCreate either bundle or group products.\nSearch, add, delete, and reorder products.\nSet default selections.\nLet customers adjust quantities.",
-            "image": ""
+            "image": "shopify://shop_images/Bundle_Product.png"
           }
         },
         "slide_2": {
@@ -28,10 +28,10 @@
           "settings": {
             "media_position": "left",
             "eyebrow": "Storefront",
-            "title": "Group Product -\nStorefront",
+            "title": "Group Product -Storefront",
             "label": "",
             "points": "Showcase related products together.\nEasily change item quantities.\nReal-time price updates.\nAdd all selected items in one click.",
-            "image": ""
+            "image": "shopify://shop_images/Group_Product-_Storefront.png"
           }
         },
         "slide_3": {
@@ -42,7 +42,7 @@
             "title": "Group Product",
             "label": "",
             "points": "Quickly add and configure product options in the app backend.\nCreate either a group product or a bundle product, not both for the same set.\nSearch, select, add, delete, and reorder products with ease.\nArrange items using drag-and-drop functionality.",
-            "image": ""
+            "image": "shopify://shop_images/Group_Product.png"
           }
         },
         "slide_4": {
@@ -50,10 +50,10 @@
           "settings": {
             "media_position": "right",
             "eyebrow": "Cart experience",
-            "title": "Bundle Product -\nCart Page",
+            "title": "Bundle Product -Cart Page",
             "label": "",
             "points": "",
-            "image": ""
+            "image": "shopify://shop_images/Bundle_Product_-_Cart_Page.png"
           }
         },
         "slide_5": {
@@ -61,10 +61,10 @@
           "settings": {
             "media_position": "left",
             "eyebrow": "Cart experience",
-            "title": "Group Product -\nCart Page",
+            "title": "Group Product -Cart Page",
             "label": "",
             "points": "",
-            "image": ""
+            "image": "shopify://shop_images/Group_Product_-_Cart_Page.png"
           }
         }
       },
@@ -79,7 +79,6 @@
         "app_name": "ESTS Smart Product Bundler",
         "app_url": "https://apps.shopify.com/advanced-product-options-1",
         "app_description": "Easily create custom product options for your store with the Group & Bundle Product app. The app helps merchants build bundled products, grouped selections, and personalized choices with a simple drag-and-drop workflow.",
-        "app_logo": "",
         "accent_color": "#544a93"
       }
     }
