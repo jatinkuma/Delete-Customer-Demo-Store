@@ -1,74 +1,187 @@
 {%- style -%}
-  .page-type-index .header-wrapper,
-  .page-type-index .shopify-section-group-footer-group {
-    display: none !important;
-  }
-
   .app-storyboard {
     --story-accent: {{ section.settings.accent_color }};
-    --story-ink: #25262b;
-    --story-shadow: 0 24px 80px rgba(27, 20, 75, 0.18);
-    background: #ffffff;
+    --story-accent-deep: #433879;
+    --story-accent-soft: rgba(84, 74, 147, 0.08);
+    --story-ink: #202127;
+    --story-muted: #60646f;
+    --story-line: rgba(32, 33, 39, 0.08);
+    --story-surface: #ffffff;
+    --story-surface-alt: #f7f7fb;
+    --story-shadow: 0 24px 70px rgba(33, 24, 78, 0.12);
     font-family: 'Manrope', sans-serif;
+    color: var(--story-ink);
+    background:
+      radial-gradient(circle at top left, rgba(84, 74, 147, 0.12), transparent 32%),
+      linear-gradient(180deg, #ffffff 0%, #fcfcfe 100%);
   }
 
-  .app-storyboard__slide {
+  .app-storyboard .page-width {
+    max-width: 138rem;
+  }
+
+  .app-storyboard__hero {
+    padding: 16rem 0 8rem;
+  }
+
+  .app-storyboard__hero-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    min-height: 100vh;
-  }
-
-  .app-storyboard__panel {
-    position: relative;
-    overflow: hidden;
-    padding: clamp(3.2rem, 6vw, 5.6rem);
-    display: flex;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 4.8rem;
     align-items: center;
   }
 
-  .app-storyboard__panel--light {
-    background:
-      linear-gradient(128deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.96) 100%),
-      repeating-linear-gradient(140deg, transparent 0, transparent 7.4rem, rgba(76, 63, 143, 0.045) 7.4rem, rgba(76, 63, 143, 0.045) 12rem);
+  .app-storyboard__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 1.5rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(84, 74, 147, 0.15);
+    color: var(--story-accent-deep);
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    box-shadow: 0 10px 30px rgba(84, 74, 147, 0.08);
+  }
+
+  .app-storyboard__eyebrow::before {
+    content: '';
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background: var(--story-accent);
+  }
+
+  .app-storyboard__hero-title {
+    margin: 2.2rem 0 2rem;
+    font-size: clamp(4.4rem, 5.4vw, 7.2rem);
+    line-height: 0.96;
+    letter-spacing: -0.06em;
+    font-weight: 800;
     color: var(--story-ink);
   }
 
-  .app-storyboard__panel--dark {
-    background: var(--story-accent);
-    color: #ffffff;
-    justify-content: center;
+  .app-storyboard__hero-title strong {
+    color: var(--story-accent);
+    font-weight: 800;
   }
 
-  .app-storyboard__panel-inner {
-    width: 100%;
-    max-width: 56rem;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
+  .app-storyboard__hero-text {
+    margin: 0 0 3rem;
+    max-width: 58rem;
+    font-size: 1.95rem;
+    line-height: 1.7;
+    color: var(--story-muted);
   }
 
-  .app-storyboard__brand {
+  .app-storyboard__hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .app-storyboard__button {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
+    min-height: 5.4rem;
+    padding: 0 2.2rem;
+    border-radius: 999px;
+    font-size: 1.55rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  }
+
+  .app-storyboard__button:hover {
+    transform: translateY(-2px);
+  }
+
+  .app-storyboard__button--primary {
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--story-accent), #6d5dbb);
+    box-shadow: 0 18px 36px rgba(84, 74, 147, 0.22);
+  }
+
+  .app-storyboard__button--secondary {
+    color: var(--story-ink);
+    background: #ffffff;
+    border: 1px solid var(--story-line);
+  }
+
+  .app-storyboard__hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.6rem;
+  }
+
+  .app-storyboard__stat {
+    padding: 1.8rem;
+    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(84, 74, 147, 0.1);
+    box-shadow: 0 14px 30px rgba(15, 17, 34, 0.04);
+  }
+
+  .app-storyboard__stat-value {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+  }
+
+  .app-storyboard__stat-label {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: var(--story-muted);
+  }
+
+  .app-storyboard__hero-card {
+    position: relative;
+    padding: 2rem;
+    border-radius: 3rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(249, 249, 253, 0.98));
+    border: 1px solid rgba(84, 74, 147, 0.1);
+    box-shadow: var(--story-shadow);
+  }
+
+  .app-storyboard__hero-card::before {
+    content: '';
+    position: absolute;
+    inset: 2rem auto auto 2rem;
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(84, 74, 147, 0.18) 0%, transparent 68%);
+    pointer-events: none;
+  }
+
+  .app-storyboard__appbar {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
     gap: 1.4rem;
-    margin-bottom: clamp(3rem, 8vw, 5rem);
-    color: inherit;
+    margin-bottom: 1.8rem;
   }
 
   .app-storyboard__brand-mark {
-    width: 5.2rem;
-    height: 5.2rem;
+    width: 5.4rem;
+    height: 5.4rem;
     border-radius: 50%;
-    background: #2b2b2b;
+    background: #2a2a2f;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-  }
-
-  .app-storyboard__brand-mark--dark-surface {
-    background: #ffffff;
+    color: #ffffff;
+    flex-shrink: 0;
   }
 
   .app-storyboard__brand-mark img {
@@ -82,43 +195,175 @@
     height: 2.6rem;
   }
 
-  .app-storyboard__brand-text {
-    font-size: clamp(2rem, 2vw, 2.6rem);
-    line-height: 1.2;
+  .app-storyboard__app-name {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+  }
+
+  .app-storyboard__app-meta {
+    display: block;
+    margin-top: 0.2rem;
+    font-size: 1.35rem;
+    color: var(--story-muted);
+  }
+
+  .app-storyboard__hero-screen {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 2rem;
+    background: #ffffff;
+    border: 1px solid rgba(15, 15, 15, 0.06);
+    min-height: 28rem;
+  }
+
+  .app-storyboard__hero-screen img,
+  .app-storyboard__screen img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .app-storyboard__placeholder {
+    min-height: 28rem;
+    display: grid;
+    place-items: center;
+    padding: 3rem;
+    text-align: center;
+    color: var(--story-muted);
+    background:
+      linear-gradient(135deg, rgba(84, 74, 147, 0.08), rgba(84, 74, 147, 0.02)),
+      #ffffff;
+  }
+
+  .app-storyboard__placeholder strong {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-size: 2rem;
+    color: var(--story-ink);
+  }
+
+  .app-storyboard__feature-strip {
+    padding-bottom: 8rem;
+  }
+
+  .app-storyboard__feature-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1.6rem;
+  }
+
+  .app-storyboard__feature {
+    padding: 2.4rem 2rem;
+    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid var(--story-line);
+    box-shadow: 0 14px 30px rgba(15, 17, 34, 0.04);
+  }
+
+  .app-storyboard__feature-title {
+    margin: 0 0 0.8rem;
+    font-size: 1.8rem;
     font-weight: 800;
     letter-spacing: -0.03em;
   }
 
-  .app-storyboard__content {
-    max-width: 50rem;
+  .app-storyboard__feature-text {
+    margin: 0;
+    font-size: 1.45rem;
+    line-height: 1.65;
+    color: var(--story-muted);
   }
 
-  .app-storyboard__eyebrow {
-    display: inline-block;
-    margin-bottom: 1.8rem;
-    font-size: 1.3rem;
-    font-weight: 800;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    opacity: 0.65;
+  .app-storyboard__section-head {
+    padding-bottom: 2rem;
+    text-align: center;
   }
 
-  .app-storyboard__title {
-    margin: 0 0 3rem;
-    font-size: clamp(4.8rem, 5vw, 7rem);
-    line-height: 0.98;
-    font-weight: 800;
+  .app-storyboard__section-title {
+    margin: 0 0 1.2rem;
+    font-size: clamp(3.4rem, 4vw, 5rem);
+    line-height: 1;
     letter-spacing: -0.05em;
-    color: inherit;
+    font-weight: 800;
+  }
+
+  .app-storyboard__section-text {
+    max-width: 72rem;
+    margin: 0 auto;
+    font-size: 1.7rem;
+    line-height: 1.7;
+    color: var(--story-muted);
+  }
+
+  .app-storyboard__showcase {
+    padding: 4rem 0 10rem;
+  }
+
+  .app-storyboard__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    gap: 3rem;
+    align-items: center;
+    margin-top: 3rem;
+    padding: 3rem;
+    border-radius: 3.2rem;
+    background: rgba(255, 255, 255, 0.86);
+    border: 1px solid rgba(84, 74, 147, 0.08);
+    box-shadow: 0 22px 50px rgba(15, 17, 34, 0.05);
+  }
+
+  .app-storyboard__row--reverse {
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  }
+
+  .app-storyboard__row--reverse .app-storyboard__screen-col {
+    order: 2;
+  }
+
+  .app-storyboard__screen-shell {
+    padding: 1.6rem;
+    border-radius: 2.4rem;
+    background: linear-gradient(180deg, #5c4ea2 0%, #4b417f 100%);
+    box-shadow: 0 24px 50px rgba(84, 74, 147, 0.22);
+  }
+
+  .app-storyboard__screen {
+    overflow: hidden;
+    border-radius: 1.8rem;
+    background: #ffffff;
+    min-height: 24rem;
+  }
+
+  .app-storyboard__copy-badge {
+    display: inline-block;
+    margin-bottom: 1.6rem;
+    padding: 0.8rem 1.4rem;
+    border-radius: 999px;
+    background: var(--story-accent-soft);
+    color: var(--story-accent-deep);
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .app-storyboard__copy-title {
+    margin: 0 0 1.6rem;
+    font-size: clamp(3.4rem, 4vw, 4.8rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    font-weight: 800;
     white-space: pre-line;
   }
 
-  .app-storyboard__label {
-    margin: 0 0 2.4rem;
-    font-size: clamp(2.4rem, 3vw, 3.6rem);
-    line-height: 1.1;
+  .app-storyboard__copy-label {
+    margin: 0 0 1.8rem;
+    font-size: 2rem;
     font-weight: 800;
-    letter-spacing: -0.04em;
+    color: var(--story-ink);
   }
 
   .app-storyboard__points {
@@ -126,262 +371,306 @@
     margin: 0;
     padding: 0;
     display: grid;
-    gap: 2rem;
+    gap: 1.2rem;
   }
 
   .app-storyboard__point {
-    font-size: clamp(2rem, 2.2vw, 2.7rem);
-    line-height: 1.45;
-    font-weight: 500;
-    color: rgba(37, 38, 43, 0.95);
+    display: grid;
+    grid-template-columns: 3.2rem minmax(0, 1fr);
+    gap: 1.2rem;
+    align-items: start;
+    font-size: 1.7rem;
+    line-height: 1.7;
+    color: var(--story-muted);
   }
 
   .app-storyboard__point-index {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--story-accent);
+    color: #ffffff;
+    font-size: 1.35rem;
     font-weight: 800;
   }
 
-  .app-storyboard__media-wrap {
-    position: relative;
-    width: min(100%, 84rem);
-    margin: 0 auto;
+  .app-storyboard__cta {
+    padding: 0 0 11rem;
   }
 
-  .app-storyboard__media-card {
+  .app-storyboard__cta-box {
     position: relative;
-    background: #ffffff;
-    border-radius: 1.6rem;
-    padding: 1.4rem;
-    box-shadow: var(--story-shadow);
-  }
-
-  .app-storyboard__media-frame {
     overflow: hidden;
-    border-radius: 1.1rem;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(246, 246, 246, 0.95));
-    border: 1px solid rgba(15, 15, 15, 0.06);
-    min-height: 26rem;
-  }
-
-  .app-storyboard__media-frame img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .app-storyboard__placeholder {
-    min-height: 26rem;
-    display: grid;
-    place-items: center;
-    padding: 4rem;
-    text-align: center;
-    color: rgba(37, 38, 43, 0.55);
-  }
-
-  .app-storyboard__placeholder strong {
-    display: block;
-    margin-bottom: 0.8rem;
-    font-size: 2rem;
-    color: rgba(37, 38, 43, 0.86);
-  }
-
-  .app-storyboard__decor {
-    position: absolute;
-    width: clamp(6rem, 10vw, 10rem);
-    opacity: 0.95;
-  }
-
-  .app-storyboard__decor--top-right {
-    top: 3.2rem;
-    right: 3.2rem;
-  }
-
-  .app-storyboard__decor--bottom-left {
-    left: 3.2rem;
-    bottom: 3.2rem;
-  }
-
-  .app-storyboard__decor path {
-    fill: none;
-    stroke: currentColor;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 1.5;
-  }
-
-  .app-storyboard__panel--light .app-storyboard__decor {
-    color: var(--story-accent);
-  }
-
-  .app-storyboard__panel--dark .app-storyboard__decor {
+    padding: 5rem;
+    border-radius: 3.2rem;
+    background: linear-gradient(135deg, #4f4691 0%, #6356ae 50%, #796ad0 100%);
     color: #ffffff;
+    box-shadow: 0 30px 60px rgba(63, 52, 120, 0.25);
   }
 
-  .app-storyboard__slide--media-left .app-storyboard__panel--dark {
-    order: -1;
+  .app-storyboard__cta-box::after {
+    content: '';
+    position: absolute;
+    right: -6rem;
+    top: -6rem;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .app-storyboard__cta-title {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 1.2rem;
+    font-size: clamp(3.2rem, 4vw, 4.8rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    font-weight: 800;
+  }
+
+  .app-storyboard__cta-text {
+    position: relative;
+    z-index: 1;
+    max-width: 66rem;
+    margin: 0 0 2.6rem;
+    font-size: 1.7rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.84);
+  }
+
+  .app-storyboard__cta .app-storyboard__button--secondary {
+    border-color: rgba(255, 255, 255, 0.18);
+  }
+
+  @media screen and (max-width: 1199px) {
+    .app-storyboard__feature-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
   }
 
   @media screen and (max-width: 989px) {
-    .app-storyboard__slide,
-    .app-storyboard__slide--media-left {
-      grid-template-columns: 1fr;
-      min-height: auto;
+    .app-storyboard__hero {
+      padding-top: 13rem;
     }
 
-    .app-storyboard__slide--media-left .app-storyboard__panel--dark {
+    .app-storyboard__hero-grid,
+    .app-storyboard__row,
+    .app-storyboard__row--reverse {
+      grid-template-columns: 1fr;
+    }
+
+    .app-storyboard__row--reverse .app-storyboard__screen-col {
       order: 0;
     }
 
-    .app-storyboard__panel {
-      min-height: auto;
-      padding: 3.2rem 2.2rem;
+    .app-storyboard__hero-stats,
+    .app-storyboard__feature-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .app-storyboard__panel--light {
-      order: 1;
+    .app-storyboard__row,
+    .app-storyboard__cta-box {
+      padding: 2.4rem;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .app-storyboard__hero {
+      padding-top: 12rem;
+      padding-bottom: 5rem;
     }
 
-    .app-storyboard__panel--dark {
-      order: 2;
+    .app-storyboard__hero-stats,
+    .app-storyboard__feature-grid {
+      grid-template-columns: 1fr;
     }
 
-    .app-storyboard__brand {
-      margin-bottom: 2.8rem;
+    .app-storyboard__hero-title {
+      font-size: clamp(3.8rem, 10vw, 5.4rem);
     }
 
-    .app-storyboard__title {
-      font-size: clamp(3.8rem, 10vw, 5.2rem);
-    }
-
-    .app-storyboard__label {
-      font-size: clamp(2rem, 7vw, 3rem);
-    }
-
+    .app-storyboard__hero-text,
+    .app-storyboard__section-text,
+    .app-storyboard__cta-text,
     .app-storyboard__point {
-      font-size: clamp(1.8rem, 5vw, 2.3rem);
+      font-size: 1.55rem;
     }
 
-    .app-storyboard__media-card {
-      padding: 1rem;
+    .app-storyboard__copy-title {
+      font-size: clamp(2.8rem, 9vw, 4rem);
     }
 
-    .app-storyboard__decor--top-right {
-      top: 2rem;
-      right: 2rem;
-    }
-
-    .app-storyboard__decor--bottom-left {
-      left: 2rem;
-      bottom: 2rem;
+    .app-storyboard__row {
+      margin-top: 2rem;
     }
   }
 {%- endstyle -%}
 
-{%- capture app_storyboard_chevrons -%}
-  <svg viewBox="0 0 74 28" aria-hidden="true" focusable="false">
-    <path d="M17 2L3 14L17 26" />
-    <path d="M39 2L25 14L39 26" />
-    <path d="M61 2L47 14L61 26" />
-  </svg>
-{%- endcapture -%}
+{%- assign hero_block = section.blocks.first -%}
 
 <section class="app-storyboard">
-  {%- for block in section.blocks -%}
-    {%- assign bullet_items = block.settings.points | newline_to_br | split: '<br />' -%}
-    <div class="app-storyboard__slide {% if block.settings.media_position == 'left' %}app-storyboard__slide--media-left{% endif %}" {{ block.shopify_attributes }}>
-      <div class="app-storyboard__panel app-storyboard__panel--light">
-        <div class="app-storyboard__panel-inner">
-          {%- unless block.settings.media_position == 'left' -%}
-            <div class="app-storyboard__brand">
-              <span class="app-storyboard__brand-mark">
-                {%- if section.settings.app_logo != blank -%}
-                  {{ section.settings.app_logo | image_url: width: 120 | image_tag: loading: 'lazy', widths: '60, 90, 120' }}
-                {%- else -%}
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <circle cx="12" cy="6" r="2" fill="#ffffff"/>
-                    <circle cx="6" cy="10" r="2" fill="#ffffff"/>
-                    <circle cx="18" cy="10" r="2" fill="#ffffff"/>
-                    <path d="M12 8v5M6 12l6 3 6-3M8 18h8" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                {%- endif -%}
-              </span>
-              <span class="app-storyboard__brand-text">{{ section.settings.app_name | escape }}</span>
-            </div>
-          {%- endunless -%}
+  <div class="page-width app-storyboard__hero">
+    <div class="app-storyboard__hero-grid">
+      <div>
+        <span class="app-storyboard__eyebrow">Shopify App Experience</span>
+        <h1 class="app-storyboard__hero-title">
+          Build <strong>smart bundles</strong> and grouped product flows that feel clean, fast, and conversion-ready.
+        </h1>
+        <p class="app-storyboard__hero-text">{{ section.settings.app_description }}</p>
 
-          <div class="app-storyboard__content">
-            {%- if block.settings.eyebrow != blank -%}
-              <span class="app-storyboard__eyebrow">{{ block.settings.eyebrow }}</span>
-            {%- endif -%}
-            <h2 class="app-storyboard__title">{{ block.settings.title | escape }}</h2>
-            {%- if block.settings.label != blank -%}
-              <p class="app-storyboard__label">{{ block.settings.label | escape }}</p>
-            {%- endif -%}
-
-            {%- if bullet_items.size > 0 -%}
-              <ol class="app-storyboard__points">
-                {%- for item in bullet_items -%}
-                  {%- assign clean_item = item | strip -%}
-                  {%- if clean_item != blank -%}
-                    <li class="app-storyboard__point">
-                      <span class="app-storyboard__point-index">{{ forloop.index }}.</span>
-                      {{ clean_item }}
-                    </li>
-                  {%- endif -%}
-                {%- endfor -%}
-              </ol>
-            {%- endif -%}
-          </div>
+        <div class="app-storyboard__hero-actions">
+          <a class="app-storyboard__button app-storyboard__button--primary" href="{{ section.settings.app_url }}">View App Listing</a>
+          <a class="app-storyboard__button app-storyboard__button--secondary" href="#AppStoryboardShowcase">Explore Screens</a>
         </div>
 
-        <div class="app-storyboard__decor app-storyboard__decor--bottom-left">
-          {{ app_storyboard_chevrons }}
+        <div class="app-storyboard__hero-stats">
+          <div class="app-storyboard__stat">
+            <span class="app-storyboard__stat-value">Custom</span>
+            <span class="app-storyboard__stat-label">Product options for bundles, groups, and personalized selections</span>
+          </div>
+          <div class="app-storyboard__stat">
+            <span class="app-storyboard__stat-value">Drag & Drop</span>
+            <span class="app-storyboard__stat-label">Merchants can arrange products quickly with a simple backend flow</span>
+          </div>
+          <div class="app-storyboard__stat">
+            <span class="app-storyboard__stat-value">Storefront Ready</span>
+            <span class="app-storyboard__stat-label">Cleaner grouped layouts, quantity controls, and simpler add-to-cart journeys</span>
+          </div>
         </div>
       </div>
 
-      <div class="app-storyboard__panel app-storyboard__panel--dark">
-        <div class="app-storyboard__panel-inner">
-          {%- if block.settings.media_position == 'left' -%}
-            <div class="app-storyboard__brand">
-              <span class="app-storyboard__brand-mark app-storyboard__brand-mark--dark-surface">
-                {%- if section.settings.app_logo != blank -%}
-                  {{ section.settings.app_logo | image_url: width: 120 | image_tag: loading: 'lazy', widths: '60, 90, 120' }}
-                {%- else -%}
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <circle cx="12" cy="6" r="2" fill="#2b2b2b"/>
-                    <circle cx="6" cy="10" r="2" fill="#2b2b2b"/>
-                    <circle cx="18" cy="10" r="2" fill="#2b2b2b"/>
-                    <path d="M12 8v5M6 12l6 3 6-3M8 18h8" stroke="#2b2b2b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                {%- endif -%}
-              </span>
-              <span class="app-storyboard__brand-text">{{ section.settings.app_name | escape }}</span>
-            </div>
-          {%- endif -%}
-
-          <div class="app-storyboard__media-wrap">
-            <div class="app-storyboard__media-card">
-              <div class="app-storyboard__media-frame">
-                {%- if block.settings.image != blank -%}
-                  {{ block.settings.image | image_url: width: 1600 | image_tag: loading: 'lazy', widths: '550, 750, 1100, 1500, 1600' }}
-                {%- else -%}
-                  <div class="app-storyboard__placeholder">
-                    <div>
-                      <strong>Screenshot slot</strong>
-                      Upload this slide's app screenshot from the theme editor to match your provided design.
-                    </div>
-                  </div>
-                {%- endif -%}
-              </div>
-            </div>
+      <div class="app-storyboard__hero-card">
+        <div class="app-storyboard__appbar">
+          <span class="app-storyboard__brand-mark">
+            {%- if section.settings.app_logo != blank -%}
+              {{ section.settings.app_logo | image_url: width: 140 | image_tag: loading: 'lazy', widths: '70, 100, 140' }}
+            {%- else -%}
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="6" r="2" fill="currentColor"/>
+                <circle cx="6" cy="10" r="2" fill="currentColor"/>
+                <circle cx="18" cy="10" r="2" fill="currentColor"/>
+                <path d="M12 8v5M6 12l6 3 6-3M8 18h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            {%- endif -%}
+          </span>
+          <div>
+            <span class="app-storyboard__app-name">{{ section.settings.app_name }}</span>
+            <span class="app-storyboard__app-meta">Custom options, grouped products, and bundle setup for Shopify stores</span>
           </div>
         </div>
 
-        <div class="app-storyboard__decor app-storyboard__decor--top-right">
-          {{ app_storyboard_chevrons }}
+        <div class="app-storyboard__hero-screen">
+          {%- if hero_block != blank and hero_block.settings.image != blank -%}
+            {{ hero_block.settings.image | image_url: width: 1600 | image_tag: loading: 'lazy', widths: '550, 750, 1100, 1500, 1600' }}
+          {%- else -%}
+            <div class="app-storyboard__placeholder">
+              <div>
+                <strong>Hero screenshot</strong>
+                Theme editor se first slide me app admin ya storefront screenshot upload kijiye.
+              </div>
+            </div>
+          {%- endif -%}
         </div>
       </div>
     </div>
-  {%- endfor -%}
+  </div>
+
+  <div class="page-width app-storyboard__feature-strip">
+    <div class="app-storyboard__feature-grid">
+      <article class="app-storyboard__feature">
+        <h3 class="app-storyboard__feature-title">Custom Product Options</h3>
+        <p class="app-storyboard__feature-text">Flexible setup for product variants, groups, and bundle-driven selling experiences.</p>
+      </article>
+      <article class="app-storyboard__feature">
+        <h3 class="app-storyboard__feature-title">Product Bundling</h3>
+        <p class="app-storyboard__feature-text">Pair related items together and help merchants increase average order value with cleaner bundles.</p>
+      </article>
+      <article class="app-storyboard__feature">
+        <h3 class="app-storyboard__feature-title">Grouped Products</h3>
+        <p class="app-storyboard__feature-text">Show connected products in one structured view so shoppers can select combinations faster.</p>
+      </article>
+      <article class="app-storyboard__feature">
+        <h3 class="app-storyboard__feature-title">Easy Drag-and-Drop Setup</h3>
+        <p class="app-storyboard__feature-text">Merchants can reorder and organize products without getting stuck in a complicated admin flow.</p>
+      </article>
+      <article class="app-storyboard__feature">
+        <h3 class="app-storyboard__feature-title">Customizable Display</h3>
+        <p class="app-storyboard__feature-text">A presentation style that can adapt to different storefront needs while staying visually clean.</p>
+      </article>
+    </div>
+  </div>
+
+  <div id="AppStoryboardShowcase" class="page-width app-storyboard__showcase">
+    <div class="app-storyboard__section-head">
+      <h2 class="app-storyboard__section-title">Designed around real product workflows</h2>
+      <p class="app-storyboard__section-text">
+        Your provided screens are now presented as structured product stories, so the theme feels more premium and easier to scan for merchants reviewing the app.
+      </p>
+    </div>
+
+    {%- for block in section.blocks -%}
+      {%- assign bullet_items = block.settings.points | newline_to_br | split: '<br />' -%}
+      <article class="app-storyboard__row {% if block.settings.media_position == 'left' %}app-storyboard__row--reverse{% endif %}" {{ block.shopify_attributes }}>
+        <div class="app-storyboard__screen-col">
+          <div class="app-storyboard__screen-shell">
+            <div class="app-storyboard__screen">
+              {%- if block.settings.image != blank -%}
+                {{ block.settings.image | image_url: width: 1600 | image_tag: loading: 'lazy', widths: '550, 750, 1100, 1500, 1600' }}
+              {%- else -%}
+                <div class="app-storyboard__placeholder">
+                  <div>
+                    <strong>Screenshot slot</strong>
+                    Is content block ke liye screenshot upload karke exact reference visuals add kar sakte ho.
+                  </div>
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+
+        <div>
+          {%- if block.settings.eyebrow != blank -%}
+            <span class="app-storyboard__copy-badge">{{ block.settings.eyebrow }}</span>
+          {%- endif -%}
+          <h3 class="app-storyboard__copy-title">{{ block.settings.title }}</h3>
+          {%- if block.settings.label != blank -%}
+            <p class="app-storyboard__copy-label">{{ block.settings.label }}</p>
+          {%- endif -%}
+
+          {%- if bullet_items.size > 0 -%}
+            <ol class="app-storyboard__points">
+              {%- for item in bullet_items -%}
+                {%- assign clean_item = item | strip -%}
+                {%- if clean_item != blank -%}
+                  <li class="app-storyboard__point">
+                    <span class="app-storyboard__point-index">{{ forloop.index }}</span>
+                    <span>{{ clean_item }}</span>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ol>
+          {%- endif -%}
+        </div>
+      </article>
+    {%- endfor -%}
+  </div>
+
+  <div class="page-width app-storyboard__cta">
+    <div class="app-storyboard__cta-box">
+      <h2 class="app-storyboard__cta-title">Give merchants a cleaner way to sell bundled and grouped products.</h2>
+      <p class="app-storyboard__cta-text">
+        The layout now keeps your theme professional while still supporting the screenshot-driven storytelling you wanted for this app presentation.
+      </p>
+      <div class="app-storyboard__hero-actions">
+        <a class="app-storyboard__button app-storyboard__button--primary" href="{{ section.settings.app_url }}">Open App Listing</a>
+        <a class="app-storyboard__button app-storyboard__button--secondary" href="#MainContent">Back to Top</a>
+      </div>
+    </div>
+  </div>
 </section>
 
 {% schema %}
@@ -395,7 +684,18 @@
       "type": "text",
       "id": "app_name",
       "label": "App name",
-      "default": "Group & Bundle Product"
+      "default": "ESTS Smart Product Bundler"
+    },
+    {
+      "type": "url",
+      "id": "app_url",
+      "label": "App URL"
+    },
+    {
+      "type": "textarea",
+      "id": "app_description",
+      "label": "App description",
+      "default": "Easily create custom product options for your store with the Group & Bundle Product app. Create flexible bundle products, grouped selections, and personalized buying experiences with an easy drag-and-drop setup."
     },
     {
       "type": "image_picker",
@@ -412,7 +712,7 @@
   "blocks": [
     {
       "type": "slide",
-      "name": "Slide",
+      "name": "Showcase row",
       "settings": [
         {
           "type": "select",
@@ -428,7 +728,7 @@
           "type": "text",
           "id": "eyebrow",
           "label": "Eyebrow",
-          "default": "App overview"
+          "default": "Admin flow"
         },
         {
           "type": "text",

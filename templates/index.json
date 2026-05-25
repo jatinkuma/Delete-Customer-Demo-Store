@@ -77,6 +77,8 @@
       ],
       "settings": {
         "app_name": "ESTS Smart Product Bundler",
+        "app_url": "https://apps.shopify.com/advanced-product-options-1",
+        "app_description": "Easily create custom product options for your store with the Group & Bundle Product app. The app helps merchants build bundled products, grouped selections, and personalized choices with a simple drag-and-drop workflow.",
         "app_logo": "",
         "accent_color": "#544a93"
       }
