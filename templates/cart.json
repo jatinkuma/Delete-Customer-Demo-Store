@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "cart-items": {
@@ -10,27 +19,30 @@
     },
     "cart-footer": {
       "type": "main-cart-footer",
+      "blocks": {
+        "ests_smart_product_bundler_ests_cart_js_URCMyh": {
+          "type": "shopify://apps/ests-smart-product-bundler/blocks/ests_cart_js/3ad550ad-1c95-4268-bbb6-190c6b24d684",
+          "settings": {}
+        },
+        "subtotal": {
+          "type": "subtotal",
+          "settings": {}
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "ests_smart_product_bundler_ests_cart_js_URCMyh",
+        "subtotal",
+        "buttons"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "padding_top": 20,
         "padding_bottom": 40
-      },
-      "blocks": {
-        "subtotal": {
-          "type": "subtotal",
-          "settings": {
-          }
-        },
-        "buttons": {
-          "type": "buttons",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "subtotal",
-        "buttons"
-      ]
+      }
     }
   },
   "order": [
