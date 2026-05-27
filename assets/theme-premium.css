@@ -1,57 +1,67 @@
 :root {
-  /* Colors & Design System - Light Premium SaaS Palette */
-  --color-brand-1: #6366f1; /* Indigo */
-  --color-brand-2: #8b5cf6; /* Violet */
-  --color-brand-3: #ec4899; /* Pink */
-  
-  /* Backgrounds: Clean white/light background with subtle soft gradients */
-  --gradient-hero: radial-gradient(circle at 50% 0%, #f5f3ff 0%, #ffffff 50%);
-  --gradient-heero: radial-gradient(circle at 50% 0%, #f5f3ff 0%, #ffffff 50% , #ffffff 50%);
-  --gradient-brand: linear-gradient(135deg, #6366f1, #a855f7);
-  --gradient-cta: linear-gradient(135deg, #7c3aed, #ec4899);
-  --gradient-vibrant: linear-gradient(135deg, #6366f1, #ec4899); /* For CTA section */
-  
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(0, 0, 0, 0.05);
-  --glass-blur: blur(12px);
-  
-  --surface-0: #ffffff; /* Page BG */
-  --surface-1: #f8fafc; /* Card BG */
-  --surface-2: #f1f5f9; /* Hover BG */
-  --surface-3: #e2e8f0;
-  
+  /* Colors & Design System - ESTS Dark Theme (Black + Lime Green) */
+  --color-brand-1: #a3e635;   /* Lime Green - primary accent */
+  --color-brand-2: #84cc16;   /* Lime Green darker */
+  --color-brand-3: #bef264;   /* Lime Green lighter */
+
+  /* Backgrounds: Deep dark background matching ESTS app screenshots */
+  --gradient-hero: radial-gradient(ellipse at 60% 0%, rgba(163, 230, 53, 0.12) 0%, #0a0a0a 55%);
+  --gradient-heero: radial-gradient(ellipse at 60% 0%, rgba(163, 230, 53, 0.12) 0%, #0a0a0a 55%);
+  --gradient-brand: linear-gradient(135deg, #a3e635, #84cc16);
+  --gradient-cta: linear-gradient(135deg, #a3e635, #65a30d);
+  --gradient-vibrant: linear-gradient(135deg, #a3e635, #84cc16); /* For CTA section */
+
+  --glass-bg: rgba(20, 20, 20, 0.85);
+  --glass-border: rgba(163, 230, 53, 0.15);
+  --glass-blur: blur(16px);
+
+  --surface-0: #0a0a0a;   /* Page BG - near black */
+  --surface-1: #111111;   /* Card BG */
+  --surface-2: #1a1a1a;   /* Hover BG */
+  --surface-3: #222222;   /* Border/divider */
+
   --font-primary: 'Inter', system-ui, sans-serif;
   --text-hero: clamp(3.5rem, 8vw, 6.5rem);
   --text-h2: clamp(2.5rem, 5vw, 4rem);
-  --text-primary: #1e293b; /* Deep Slate */
-  --text-secondary: #64748b; /* Soft Slate */
-  --text-gradient: linear-gradient(135deg, #1e293b 40%, #8b5cf6 100%);
-  --text-vibrant: linear-gradient(135deg, #6366f1, #ec4899); /* For specific words */
-  
+  --text-primary: #f0f0f0;    /* Near white */
+  --text-secondary: #9ca3af;  /* Muted grey */
+  --text-gradient: linear-gradient(135deg, #ffffff 40%, #a3e635 100%);
+  --text-vibrant: linear-gradient(135deg, #a3e635, #bef264);
+
   --space-2: 1rem;
   --space-4: 2rem;
   --space-6: 3rem;
-  --space-12: 12rem; /* Generous SaaS section spacing */
-  
+  --space-12: 12rem;
+
   --radius-lg: 24px;
   --radius-pill: 9999px;
-  
+
   --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-spring: 600ms cubic-bezier(0.16, 1, 0.3, 1);
-  
-  --glow-brand: 0 10px 40px rgba(99, 102, 241, 0.1);
-  --glow-strong: 0 20px 60px rgba(99, 102, 241, 0.2);
-  --glow-card: 0 4px 24px rgba(0, 0, 0, 0.04);
+
+  --glow-brand: 0 10px 40px rgba(163, 230, 53, 0.15);
+  --glow-strong: 0 20px 60px rgba(163, 230, 53, 0.25);
+  --glow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
 }
 
-/* Base Overrides for Light Premium Theme */
+/* Base Overrides - ESTS Dark Theme */
 body {
   font-family: var(--font-primary);
-  background-color: var(--surface-0);
+  background-color: var(--surface-0) !important;
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   margin: 0;
   overflow-x: hidden;
+}
+
+/* Force dark background everywhere */
+.gradient,
+.color-background-1,
+.color-background-2,
+main,
+.content-for-layout {
+  background-color: var(--surface-0) !important;
+  background: var(--surface-0) !important;
 }
 
 /* Animations */
@@ -70,7 +80,7 @@ body {
   50% { transform: translateY(-10px); }
 }
 
-/* Floating Navbar Styles */
+/* Floating Navbar Styles - Dark */
 .header-wrapper {
   position: fixed !important;
   top: 24px !important;
@@ -79,11 +89,11 @@ body {
   width: auto !important;
   min-width: 600px;
   max-width: 90vw;
-  background: var(--glass-bg) !important;
+  background: rgba(15, 15, 15, 0.9) !important;
   backdrop-filter: var(--glass-blur) !important;
-  border: 1px solid var(--glass-border) !important;
+  border: 1px solid rgba(163, 230, 53, 0.2) !important;
   border-radius: var(--radius-pill) !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(163, 230, 53, 0.05) !important;
   z-index: 1000 !important;
   padding: 8px 16px !important;
   transition: var(--transition-base) !important;
@@ -110,10 +120,10 @@ body {
 }
 
 .header__menu-item:hover {
-  color: var(--text-primary) !important;
+  color: var(--color-brand-1) !important;
 }
 
-/* Premium Hero Styles (Light) */
+/* Premium Hero Styles - Dark */
 .banner.premium-hero {
   min-height: 100vh !important;
   background: var(--gradient-hero) !important;
@@ -129,12 +139,12 @@ body {
   align-items: center;
   gap: 8px;
   padding: 6px 16px;
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
+  background: rgba(163, 230, 53, 0.1);
+  border: 1px solid rgba(163, 230, 53, 0.3);
   border-radius: var(--radius-pill);
   font-size: 13px;
   font-weight: 500;
-  color: var(--text-secondary);
+  color: var(--color-brand-1);
   margin-bottom: 24px;
   animation: fadeInUp 0.8s ease forwards;
 }
@@ -143,7 +153,7 @@ body {
   content: '';
   width: 6px;
   height: 6px;
-  background: #6366f1;
+  background: var(--color-brand-1);
   border-radius: 50%;
 }
 
@@ -184,25 +194,25 @@ body {
   opacity: 0;
 }
 
-/* Light Card Styles */
+/* Dark Card Styles */
 .saas-feature-card {
-  background: var(--surface-0) !important;
-  border: 1px solid #f1f5f9 !important;
+  background: var(--surface-1) !important;
+  border: 1px solid rgba(163, 230, 53, 0.12) !important;
   border-radius: var(--radius-lg) !important;
   padding: 40px !important;
-  box-shadow: var(--glow-card) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4) !important;
   transition: var(--transition-spring) !important;
 }
 
 .saas-feature-card:hover {
   transform: translateY(-8px) !important;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04) !important;
-  border-color: #e2e8f0 !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(163, 230, 53, 0.2) !important;
+  border-color: rgba(163, 230, 53, 0.3) !important;
 }
 
 .saas-feature-icon {
-  background: #f5f3ff !important;
-  color: #6366f1 !important;
+  background: rgba(163, 230, 53, 0.1) !important;
+  color: var(--color-brand-1) !important;
   width: 48px !important;
   height: 48px !important;
   border-radius: 12px !important;
