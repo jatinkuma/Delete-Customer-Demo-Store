@@ -183,6 +183,28 @@
                 {{ link.title | escape }}
               </a>
             </li>
+            {%- if downcase_title == 'catalog' -%}
+              <li>
+                <a
+                  href="https://groupandbundle-demo-store.myshopify.com/products/all-the-rare-leaves-luxury-single-origin-tea-gift-set-2"
+                  class="header__menu-item"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Group Product
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://groupandbundle-demo-store.myshopify.com/products/all-the-essentials-tea-bags"
+                  class="header__menu-item"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Bundle Product
+                </a>
+              </li>
+            {%- endif -%}
           {%- endunless -%}
         {%- endfor -%}
       </ul>
