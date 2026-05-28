@@ -925,34 +925,45 @@
 
 {%- assign hero_block = section.blocks.first -%}
 {%- capture app_storyboard_mock_admin -%}
-  <div class="app-storyboard__mock-screen">
-    <div class="app-storyboard__mock-topbar">
-      <div class="app-storyboard__mock-dots"><span></span><span></span><span></span></div>
-      <span class="app-storyboard__mock-chip">Admin dashboard</span>
+  <!-- MOCKUP 1: My Account Page with Delete Account button + Modal -->
+  <div class="ests-mock" style="font-family:'Inter',sans-serif;background:#0d0d0d;min-height:28rem;padding:0;overflow:hidden;">
+    <!-- Browser bar -->
+    <div style="background:#1a1a1a;padding:0.8rem 1.2rem;display:flex;align-items:center;gap:0.8rem;border-bottom:1px solid rgba(163,230,53,0.1);">
+      <div style="display:flex;gap:0.5rem;"><span style="width:1rem;height:1rem;border-radius:50%;background:#ff5f57;display:block;"></span><span style="width:1rem;height:1rem;border-radius:50%;background:#febc2e;display:block;"></span><span style="width:1rem;height:1rem;border-radius:50%;background:#28c840;display:block;"></span></div>
+      <div style="flex:1;background:#111;border-radius:6px;padding:0.4rem 1rem;font-size:1.1rem;color:#555;">mystore.myshopify.com/account</div>
     </div>
-    <div class="app-storyboard__mock-layout">
-      <div class="app-storyboard__mock-card app-storyboard__mock-card--padded">
-        <div class="app-storyboard__mock-title app-storyboard__mock-title--long"></div>
-        <div class="app-storyboard__mock-inputs">
-          <div class="app-storyboard__mock-field"></div>
-          <div class="app-storyboard__mock-field"></div>
-        </div>
-        <div class="app-storyboard__mock-pill"></div>
-        <div class="app-storyboard__mock-table">
-          <div class="app-storyboard__mock-row app-storyboard__mock-row--header"><span></span><span></span><span></span><span></span><span></span></div>
-          <div class="app-storyboard__mock-row"><span></span><span></span><span></span><span></span><span></span></div>
-          <div class="app-storyboard__mock-row"><span></span><span></span><span></span><span></span><span></span></div>
-          <div class="app-storyboard__mock-row"><span></span><span></span><span></span><span></span><span></span></div>
-        </div>
+    <!-- Store header -->
+    <div style="background:#111;padding:1rem 1.6rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #1a1a1a;">
+      <span style="font-size:1.4rem;font-weight:800;color:#a3e635;letter-spacing:-0.03em;">ESTS Store</span>
+      <div style="display:flex;gap:1.2rem;font-size:1.1rem;color:#666;">
+        <span>Home</span><span>Catalog</span><span>Contact</span>
+        <span style="color:#a3e635;">👤</span><span style="color:#a3e635;">🛒</span>
       </div>
-      <div class="app-storyboard__mock-side">
-        <div class="app-storyboard__mock-card app-storyboard__mock-stat-card">
-          <div class="app-storyboard__mock-stat"></div>
-          <div class="app-storyboard__mock-lines"><span></span><span></span><span></span></div>
-        </div>
-        <div class="app-storyboard__mock-card app-storyboard__mock-stat-card">
-          <div class="app-storyboard__mock-stat"></div>
-          <div class="app-storyboard__mock-lines"><span></span><span></span><span></span></div>
+    </div>
+    <!-- Account page content -->
+    <div style="padding:1.6rem;display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;position:relative;">
+      <!-- Order History -->
+      <div style="background:#111;border:1px solid #222;border-radius:1.2rem;padding:1.4rem;">
+        <div style="font-size:1.4rem;font-weight:700;color:#f0f0f0;margin-bottom:0.6rem;">Order History</div>
+        <div style="font-size:1.1rem;color:#555;margin-bottom:1.2rem;">You haven't placed any orders yet.</div>
+        <button style="background:linear-gradient(135deg,#a3e635,#84cc16);color:#0a0a0a;border:none;border-radius:8px;padding:0.7rem 1.4rem;font-size:1.2rem;font-weight:700;cursor:pointer;">Delete Account</button>
+      </div>
+      <!-- Account Details -->
+      <div style="background:#111;border:1px solid #222;border-radius:1.2rem;padding:1.4rem;">
+        <div style="font-size:1.4rem;font-weight:700;color:#f0f0f0;margin-bottom:0.8rem;">Account Details</div>
+        <div style="font-size:1.2rem;color:#f0f0f0;font-weight:600;">Jane Cooper</div>
+        <div style="font-size:1.1rem;color:#666;margin-bottom:1rem;">India</div>
+        <div style="background:#1a1a1a;border:1px solid #333;border-radius:6px;padding:0.5rem 1rem;font-size:1.1rem;color:#888;display:inline-block;">View Address(1)</div>
+      </div>
+      <!-- Modal overlay -->
+      <div style="position:absolute;inset:0;background:rgba(0,0,0,0.7);border-radius:0;display:flex;align-items:center;justify-content:center;z-index:10;">
+        <div style="background:#1a1a1a;border:1px solid rgba(163,230,53,0.2);border-radius:1.4rem;padding:1.8rem;width:22rem;box-shadow:0 20px 60px rgba(0,0,0,0.8);">
+          <div style="font-size:1.2rem;color:#9ca3af;margin-bottom:1.2rem;line-height:1.5;">We're sorry to see you go. Could you please share the reason?</div>
+          <div style="font-size:1.2rem;color:#f0f0f0;font-weight:600;margin-bottom:0.5rem;">Select the Reason:</div>
+          <div style="background:#111;border:1px solid #333;border-radius:8px;padding:0.7rem 1rem;font-size:1.2rem;color:#666;margin-bottom:1rem;display:flex;justify-content:space-between;">Add Manually <span>▾</span></div>
+          <div style="font-size:1.2rem;color:#f0f0f0;font-weight:600;margin-bottom:0.5rem;">Add Manually:</div>
+          <div style="background:#111;border:1px solid #333;border-radius:8px;padding:0.7rem 1rem;height:3rem;margin-bottom:1.2rem;"></div>
+          <button style="background:linear-gradient(135deg,#a3e635,#84cc16);color:#0a0a0a;border:none;border-radius:8px;padding:0.8rem 1.6rem;font-size:1.2rem;font-weight:700;width:100%;cursor:pointer;">Confirm Deletion</button>
         </div>
       </div>
     </div>
@@ -960,66 +971,106 @@
 {%- endcapture -%}
 
 {%- capture app_storyboard_mock_storefront -%}
-  <div class="app-storyboard__mock-screen">
-    <div class="app-storyboard__mock-topbar">
-      <div class="app-storyboard__mock-dots"><span></span><span></span><span></span></div>
-      <span class="app-storyboard__mock-chip">Storefront bundle</span>
-    </div>
-    <div class="app-storyboard__mock-card app-storyboard__mock-card--padded">
-      <div class="app-storyboard__mock-products">
-        <div class="app-storyboard__mock-product-image">
-          <div class="app-storyboard__mock-board"></div>
-          <div class="app-storyboard__mock-board"></div>
-        </div>
-        <div class="app-storyboard__mock-product-copy">
-          <div class="app-storyboard__mock-title app-storyboard__mock-title--long"></div>
-          <div class="app-storyboard__mock-price"></div>
-          <div class="app-storyboard__mock-list">
-            <div class="app-storyboard__mock-list-item"><span></span><span></span></div>
-            <div class="app-storyboard__mock-list-item"><span></span><span></span></div>
-            <div class="app-storyboard__mock-list-item"><span></span><span></span></div>
-            <div class="app-storyboard__mock-list-item"><span></span><span></span></div>
+  <!-- MOCKUP 2: Deleted Customers List Table -->
+  <div class="ests-mock" style="font-family:'Inter',sans-serif;background:#0d0d0d;min-height:28rem;padding:1.6rem;overflow:hidden;">
+    <div style="background:#111;border:1px solid rgba(163,230,53,0.12);border-radius:1.4rem;overflow:hidden;">
+      <div style="padding:1.4rem 1.6rem;border-bottom:1px solid #1a1a1a;">
+        <div style="font-size:1.5rem;font-weight:700;color:#f0f0f0;">Deleted Customers List</div>
+      </div>
+      <!-- Table header -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;background:#1a1a1a;padding:0.8rem 1.6rem;border-bottom:1px solid #222;">
+        <div style="font-size:1.2rem;font-weight:700;color:#a3e635;">Customer ID</div>
+        <div style="font-size:1.2rem;font-weight:700;color:#a3e635;">Reason</div>
+      </div>
+      <!-- Table rows -->
+      {%- assign rows = "9196240109815,Found Better Deals Elsewhere|9196494455031,N/A|9196497076471,Difficulty in Using the Website|9196504678647,Too Many Emails or Notifications|9196635750647,Privacy Concerns|9196661670135,Unsatisfactory Experience|9196663668983,Too Many Emails or Notifications" | split: "|" -%}
+      {%- for row in rows -%}
+        {%- assign cols = row | split: "," -%}
+        <div style="display:grid;grid-template-columns:1fr 1fr;padding:0.8rem 1.6rem;border-bottom:1px solid #1a1a1a;align-items:center;">
+          <div style="display:flex;align-items:center;gap:0.8rem;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span style="font-size:1.1rem;color:#f0f0f0;">{{ cols[0] }}</span>
           </div>
-          <div class="app-storyboard__mock-cta"></div>
+          <div style="font-size:1.1rem;color:#9ca3af;">{{ cols[1] }}</div>
         </div>
+      {%- endfor -%}
+      <!-- Pagination -->
+      <div style="display:flex;justify-content:center;gap:0.8rem;padding:1rem;">
+        <button style="background:#1a1a1a;border:1px solid #333;border-radius:8px;padding:0.5rem 1rem;color:#f0f0f0;font-size:1.2rem;cursor:pointer;">‹</button>
+        <button style="background:#1a1a1a;border:1px solid #333;border-radius:8px;padding:0.5rem 1rem;color:#f0f0f0;font-size:1.2rem;cursor:pointer;">›</button>
       </div>
     </div>
   </div>
 {%- endcapture -%}
 
 {%- capture app_storyboard_mock_cart -%}
-  <div class="app-storyboard__mock-screen">
-    <div class="app-storyboard__mock-topbar">
-      <div class="app-storyboard__mock-dots"><span></span><span></span><span></span></div>
-      <span class="app-storyboard__mock-chip">Cart page</span>
+  <!-- MOCKUP 3: App Configuration Panel -->
+  <div class="ests-mock" style="font-family:'Inter',sans-serif;background:#0d0d0d;min-height:28rem;padding:1.6rem;overflow:hidden;">
+    <div style="background:#111;border:1px solid rgba(163,230,53,0.12);border-radius:1.4rem;padding:1.6rem;">
+      <!-- Enable/Disable -->
+      <div style="margin-bottom:1.4rem;">
+        <div style="font-size:1.4rem;font-weight:700;color:#f0f0f0;margin-bottom:0.6rem;">Enable / Disable</div>
+        <div style="background:#0d0d0d;border:1px solid #333;border-radius:8px;padding:0.8rem 1.2rem;display:flex;justify-content:space-between;align-items:center;font-size:1.2rem;color:#a3e635;font-weight:600;">Enable <span style="color:#555;">▾</span></div>
+      </div>
+      <!-- Button Color -->
+      <div style="margin-bottom:1.4rem;">
+        <div style="font-size:1.4rem;font-weight:700;color:#f0f0f0;margin-bottom:0.3rem;">Button Color</div>
+        <div style="font-size:1.1rem;color:#666;margin-bottom:0.8rem;">Choose the Delete Customer Button Color*</div>
+        <!-- Color picker mockup -->
+        <div style="display:flex;gap:1rem;align-items:flex-start;">
+          <div style="width:8rem;height:7rem;border-radius:8px;background:linear-gradient(to bottom right,#1a2e00,#a3e635,#fff);border:1px solid #333;position:relative;">
+            <div style="position:absolute;bottom:0.4rem;right:0.4rem;width:1rem;height:1rem;border-radius:50%;background:#a3e635;border:2px solid #fff;"></div>
+          </div>
+          <div style="width:1.4rem;height:7rem;border-radius:6px;background:linear-gradient(to bottom,#ff0000,#ffff00,#00ff00,#00ffff,#0000ff,#ff00ff,#ff0000);border:1px solid #333;position:relative;">
+            <div style="position:absolute;top:40%;left:-0.3rem;width:1.8rem;height:0.4rem;background:#fff;border-radius:2px;"></div>
+          </div>
+        </div>
+        <div style="margin-top:0.8rem;">
+          <div style="font-size:1.1rem;color:#666;margin-bottom:0.3rem;">Hex Value</div>
+          <div style="background:#0d0d0d;border:1px solid #333;border-radius:8px;padding:0.6rem 1rem;font-size:1.2rem;color:#a3e635;font-family:monospace;">#B6D108</div>
+        </div>
+      </div>
+      <!-- Custom CSS -->
+      <div>
+        <div style="font-size:1.4rem;font-weight:700;color:#f0f0f0;margin-bottom:0.6rem;">Custom CSS for Button</div>
+        <div style="background:#0d0d0d;border:1px solid #333;border-radius:8px;padding:0.8rem 1rem;font-size:1.1rem;color:#a3e635;font-family:monospace;height:4rem;">.delete-btn { background: red; }</div>
+        <button style="background:transparent;border:1px solid rgba(163,230,53,0.4);color:#a3e635;border-radius:8px;padding:0.6rem 1.6rem;font-size:1.2rem;font-weight:600;margin-top:0.8rem;cursor:pointer;">Save</button>
+      </div>
     </div>
-    <div class="app-storyboard__mock-card app-storyboard__mock-card--padded app-storyboard__mock-cart">
-      <div class="app-storyboard__mock-cart-row">
-        <div class="app-storyboard__mock-thumb"></div>
-        <div>
-          <div class="app-storyboard__mock-copyline"></div>
-          <div class="app-storyboard__mock-copyline"></div>
-          <div class="app-storyboard__mock-copyline"></div>
-        </div>
-        <div class="app-storyboard__mock-qty"></div>
-        <div class="app-storyboard__mock-total"></div>
+  </div>
+{%- endcapture -%}
+
+{%- capture app_storyboard_mock_multilingual -%}
+  <!-- MOCKUP 4: About ESTS App page with multilingual -->
+  <div class="ests-mock" style="font-family:'Inter',sans-serif;background:#0d0d0d;min-height:28rem;padding:1.6rem;overflow:hidden;">
+    <div style="background:#111;border:1px solid rgba(163,230,53,0.12);border-radius:1.4rem;padding:1.6rem;">
+      <!-- Header -->
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.4rem;">
+        <div style="font-size:1.5rem;font-weight:700;color:#f0f0f0;">About ESTS Delete Customer Account</div>
+        <button style="background:linear-gradient(135deg,#a3e635,#84cc16);color:#0a0a0a;border:none;border-radius:8px;padding:0.5rem 1rem;font-size:1.1rem;font-weight:700;cursor:pointer;">Request For Language Add</button>
       </div>
-      <div class="app-storyboard__mock-cart-row">
-        <div class="app-storyboard__mock-thumb app-storyboard__mock-thumb--alt"></div>
-        <div>
-          <div class="app-storyboard__mock-copyline"></div>
-          <div class="app-storyboard__mock-copyline"></div>
-          <div class="app-storyboard__mock-copyline"></div>
+      <!-- Welcome box -->
+      <div style="background:#1a1a1a;border:1px solid rgba(163,230,53,0.1);border-radius:1rem;padding:1.2rem;margin-bottom:1rem;">
+        <div style="display:flex;align-items:center;gap:0.8rem;margin-bottom:0.8rem;">
+          <div style="width:3rem;height:3rem;background:rgba(163,230,53,0.1);border:1px solid rgba(163,230,53,0.3);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </div>
+          <div style="font-size:1.3rem;font-weight:700;color:#a3e635;">Welcome to ESTS Delete Customer Account</div>
         </div>
-        <div class="app-storyboard__mock-qty"></div>
-        <div class="app-storyboard__mock-total"></div>
+        <div style="font-size:1.1rem;color:#9ca3af;line-height:1.5;margin-bottom:0.6rem;">Our app enables Shopify customers to effortlessly delete their accounts with just one click, enhancing the user experience.</div>
+        <div style="font-size:1.1rem;color:#9ca3af;line-height:1.5;">While Shopify's administrators already possess the authority to delete customer accounts, our tool extends this functionality directly to the customers themselves.</div>
       </div>
-      <div class="app-storyboard__mock-summary">
-        <div class="app-storyboard__mock-summary-box">
-          <div class="app-storyboard__mock-copyline"></div>
-          <div class="app-storyboard__mock-copyline"></div>
-          <div class="app-storyboard__mock-cta"></div>
-        </div>
+      <!-- What You Can Do -->
+      <div style="background:#1a1a1a;border:1px solid rgba(163,230,53,0.1);border-radius:1rem;padding:1.2rem;">
+        <div style="font-size:1.3rem;font-weight:700;color:#a3e635;margin-bottom:0.8rem;">What You Can Do</div>
+        {%- assign features = "Enable customers to delete their accounts in just one click.|Ensure a secure and transparent account deletion process.|Give customers full control over their personal data.|Reduce support requests by automating account deletion." | split: "|" -%}
+        {%- assign icons = "🗑️|🔒|👤|❓" | split: "|" -%}
+        {%- for feat in features -%}
+          <div style="display:flex;align-items:center;gap:0.8rem;margin-bottom:0.6rem;">
+            <span style="font-size:1.2rem;">{{ icons[forloop.index0] }}</span>
+            <span style="font-size:1.1rem;color:#9ca3af;">{{ feat }}</span>
+          </div>
+        {%- endfor -%}
       </div>
     </div>
   </div>
@@ -1130,10 +1181,13 @@
                 {{ block.settings.image | image_url: width: 1600 | image_tag: loading: 'lazy', widths: '550, 750, 1100, 1500, 1600' }}
               {%- else -%}
                 {%- assign title_handle = block.settings.title | downcase -%}
-                {%- if title_handle contains 'cart' -%}
-                  {{ app_storyboard_mock_cart }}
-                {%- elsif title_handle contains 'storefront' -%}
+                {%- assign eyebrow_handle = block.settings.eyebrow | downcase -%}
+                {%- if title_handle contains 'deleted customers' or title_handle contains 'list' -%}
                   {{ app_storyboard_mock_storefront }}
+                {%- elsif title_handle contains 'configure' or title_handle contains 'config' or eyebrow_handle contains 'configuration' -%}
+                  {{ app_storyboard_mock_cart }}
+                {%- elsif title_handle contains 'multilingual' or title_handle contains 'language' or eyebrow_handle contains 'multilingual' -%}
+                  {{ app_storyboard_mock_multilingual }}
                 {%- else -%}
                   {{ app_storyboard_mock_admin }}
                 {%- endif -%}
