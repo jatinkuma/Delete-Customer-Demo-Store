@@ -1,19 +1,19 @@
 {%- style -%}
   .app-storyboard {
-    --story-accent: {{ section.settings.accent_color }};
-    --story-accent-deep: #433879;
-    --story-accent-soft: rgba(84, 74, 147, 0.08);
-    --story-ink: #202127;
-    --story-muted: #60646f;
-    --story-line: rgba(32, 33, 39, 0.08);
-    --story-surface: #ffffff;
-    --story-surface-alt: #f7f7fb;
-    --story-shadow: 0 24px 70px rgba(33, 24, 78, 0.12);
-    font-family: 'Manrope', sans-serif;
+    --story-accent: #a3e635;
+    --story-accent-deep: #84cc16;
+    --story-accent-soft: rgba(163, 230, 53, 0.08);
+    --story-ink: #f0f0f0;
+    --story-muted: #9ca3af;
+    --story-line: rgba(163, 230, 53, 0.1);
+    --story-surface: #111111;
+    --story-surface-alt: #1a1a1a;
+    --story-shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
+    font-family: 'Inter', sans-serif;
     color: var(--story-ink);
     background:
-      radial-gradient(circle at top left, rgba(84, 74, 147, 0.12), transparent 32%),
-      linear-gradient(180deg, #ffffff 0%, #fcfcfe 100%);
+      radial-gradient(ellipse at 70% 0%, rgba(163, 230, 53, 0.08), transparent 50%),
+      linear-gradient(180deg, #0a0a0a 0%, #0d0d0d 100%);
   }
 
   .app-storyboard .page-width {
@@ -37,14 +37,14 @@
     gap: 1rem;
     padding: 0.9rem 1.5rem;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(84, 74, 147, 0.15);
-    color: var(--story-accent-deep);
+    background: rgba(163, 230, 53, 0.08);
+    border: 1px solid rgba(163, 230, 53, 0.25);
+    color: var(--story-accent);
     font-size: 1.3rem;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    box-shadow: 0 10px 30px rgba(84, 74, 147, 0.08);
+    box-shadow: 0 4px 20px rgba(163, 230, 53, 0.08);
   }
 
   .app-storyboard__eyebrow::before {
@@ -67,14 +67,6 @@
   .app-storyboard__hero-title strong {
     color: var(--story-accent);
     font-weight: 800;
-  }
-
-  .app-storyboard__hero-text {
-    margin: 0 0 3rem;
-    max-width: 58rem;
-    font-size: 1.95rem;
-    line-height: 1.7;
-    color: var(--story-muted);
   }
 
   .app-storyboard__hero-actions {
@@ -102,15 +94,15 @@
   }
 
   .app-storyboard__button--primary {
-    color: #ffffff;
-    background: linear-gradient(135deg, var(--story-accent), #6d5dbb);
-    box-shadow: 0 18px 36px rgba(84, 74, 147, 0.22);
+    color: #0a0a0a;
+    background: linear-gradient(135deg, #a3e635, #84cc16);
+    box-shadow: 0 8px 30px rgba(163, 230, 53, 0.3);
   }
 
   .app-storyboard__button--secondary {
     color: var(--story-ink);
-    background: #ffffff;
-    border: 1px solid var(--story-line);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(163, 230, 53, 0.2);
   }
 
   .app-storyboard__hero-stats {
@@ -122,9 +114,9 @@
   .app-storyboard__stat {
     padding: 1.8rem;
     border-radius: 2rem;
-    background: rgba(255, 255, 255, 0.78);
-    border: 1px solid rgba(84, 74, 147, 0.1);
-    box-shadow: 0 14px 30px rgba(15, 17, 34, 0.04);
+    background: rgba(163, 230, 53, 0.04);
+    border: 1px solid rgba(163, 230, 53, 0.12);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   }
 
   .app-storyboard__stat-value {
@@ -146,9 +138,9 @@
     position: relative;
     padding: 2rem;
     border-radius: 3rem;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(249, 249, 253, 0.98));
-    border: 1px solid rgba(84, 74, 147, 0.1);
-    box-shadow: var(--story-shadow);
+    background: linear-gradient(180deg, rgba(20, 20, 20, 0.95), rgba(15, 15, 15, 0.98));
+    border: 1px solid rgba(163, 230, 53, 0.15);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6);
   }
 
   .app-storyboard__hero-card::before {
@@ -158,7 +150,7 @@
     width: 14rem;
     height: 14rem;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(84, 74, 147, 0.18) 0%, transparent 68%);
+    background: radial-gradient(circle, rgba(163, 230, 53, 0.1) 0%, transparent 68%);
     pointer-events: none;
   }
 
@@ -174,13 +166,14 @@
   .app-storyboard__brand-mark {
     width: 5.4rem;
     height: 5.4rem;
-    border-radius: 50%;
-    background: #2a2a2f;
+    border-radius: 1.2rem;
+    background: rgba(163, 230, 53, 0.1);
+    border: 1px solid rgba(163, 230, 53, 0.3);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    color: #ffffff;
+    color: #a3e635;
     flex-shrink: 0;
   }
 
@@ -200,6 +193,7 @@
     font-size: 2rem;
     font-weight: 800;
     letter-spacing: -0.04em;
+    color: var(--story-ink);
   }
 
   .app-storyboard__app-meta {
@@ -214,15 +208,151 @@
     z-index: 1;
     overflow: hidden;
     border-radius: 2rem;
-    background: #ffffff;
-    border: 1px solid rgba(15, 15, 15, 0.06);
+    background: #111111;
+    border: 1px solid rgba(163, 230, 53, 0.1);
     min-height: 28rem;
   }
 
   .app-storyboard__mock-screen {
     min-height: 28rem;
     padding: 2rem;
-    background: linear-gradient(180deg, rgba(247, 247, 251, 0.92), #ffffff 24%);
+    background: linear-gradient(180deg, rgba(20, 20, 20, 0.95), #111111 24%);
+  }
+
+  .app-storyboard__mock-dots span {
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    background: rgba(163, 230, 53, 0.3);
+  }
+
+  .app-storyboard__mock-chip {
+    padding: 0.8rem 1.2rem;
+    border-radius: 999px;
+    background: rgba(163, 230, 53, 0.08);
+    color: #a3e635;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .app-storyboard__mock-card {
+    border: 1px solid rgba(163, 230, 53, 0.08);
+    border-radius: 1.8rem;
+    background: #1a1a1a;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .app-storyboard__mock-title {
+    height: 1.4rem;
+    width: 36%;
+    margin-bottom: 1.2rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(163, 230, 53, 0.15), rgba(163, 230, 53, 0.04));
+  }
+
+  .app-storyboard__mock-field {
+    height: 4.2rem;
+    border-radius: 1.2rem;
+    background: #222222;
+    border: 1px solid rgba(163, 230, 53, 0.08);
+  }
+
+  .app-storyboard__mock-pill {
+    width: 16rem;
+    height: 3.6rem;
+    margin-bottom: 1.4rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #1a2e00, #a3e635);
+  }
+
+  .app-storyboard__mock-row span {
+    height: 3.8rem;
+    border-radius: 1rem;
+    background: #1a1a1a;
+    border: 1px solid rgba(163, 230, 53, 0.06);
+  }
+
+  .app-storyboard__mock-row--header span {
+    height: 1.2rem;
+    background: rgba(163, 230, 53, 0.1);
+    border: 0;
+  }
+
+  .app-storyboard__mock-stat {
+    height: 4rem;
+    width: 52%;
+    margin-bottom: 0.8rem;
+    border-radius: 1.2rem;
+    background: linear-gradient(135deg, rgba(163, 230, 53, 0.15), rgba(163, 230, 53, 0.04));
+  }
+
+  .app-storyboard__mock-lines span {
+    height: 1rem;
+    border-radius: 999px;
+    background: rgba(163, 230, 53, 0.08);
+  }
+
+  .app-storyboard__mock-board {
+    border-radius: 3rem;
+    background: linear-gradient(180deg, #1a2e00, #a3e635 120%);
+  }
+
+  .app-storyboard__mock-board:last-child {
+    background: linear-gradient(180deg, #0a1400, #65a30d 120%);
+  }
+
+  .app-storyboard__mock-price {
+    height: 1.8rem;
+    width: 28%;
+    margin: 1rem 0 1.8rem;
+    border-radius: 999px;
+    background: rgba(163, 230, 53, 0.1);
+  }
+
+  .app-storyboard__mock-list-item span:first-child {
+    height: 1.2rem;
+    border-radius: 999px;
+    background: rgba(163, 230, 53, 0.08);
+  }
+
+  .app-storyboard__mock-list-item span:last-child {
+    height: 3.8rem;
+    border-radius: 1rem;
+    background: #222222;
+    border: 1px solid rgba(163, 230, 53, 0.08);
+  }
+
+  .app-storyboard__mock-cta {
+    width: 100%;
+    height: 4.6rem;
+    margin-top: 1.6rem;
+    border-radius: 1.2rem;
+    background: linear-gradient(135deg, #1a2e00, #a3e635);
+  }
+
+  .app-storyboard__mock-thumb {
+    height: 7rem;
+    border-radius: 1.2rem;
+    background: linear-gradient(135deg, #1a2e00, #a3e635);
+  }
+
+  .app-storyboard__mock-thumb--alt {
+    background: linear-gradient(135deg, #0a1400, #65a30d);
+  }
+
+  .app-storyboard__mock-qty,
+  .app-storyboard__mock-total,
+  .app-storyboard__mock-copyline {
+    height: 1.2rem;
+    border-radius: 999px;
+    background: rgba(163, 230, 53, 0.08);
+  }
+
+  .app-storyboard__mock-qty {
+    height: 3.8rem;
+    background: #222222;
+    border: 1px solid rgba(163, 230, 53, 0.08);
   }
 
   .app-storyboard__mock-topbar {
@@ -525,9 +655,7 @@
     padding: 3rem;
     text-align: center;
     color: var(--story-muted);
-    background:
-      linear-gradient(135deg, rgba(84, 74, 147, 0.08), rgba(84, 74, 147, 0.02)),
-      #ffffff;
+    background: linear-gradient(135deg, rgba(163, 230, 53, 0.04), rgba(163, 230, 53, 0.01));
   }
 
   .app-storyboard__placeholder strong {
@@ -537,22 +665,19 @@
     color: var(--story-ink);
   }
 
-  .app-storyboard__feature-strip {
-    padding-bottom: 8rem;
-  }
-
-  .app-storyboard__feature-grid {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 1.6rem;
-  }
-
   .app-storyboard__feature {
     padding: 2.4rem 2rem;
     border-radius: 2rem;
-    background: rgba(255, 255, 255, 0.85);
-    border: 1px solid var(--story-line);
-    box-shadow: 0 14px 30px rgba(15, 17, 34, 0.04);
+    background: rgba(163, 230, 53, 0.04);
+    border: 1px solid rgba(163, 230, 53, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .app-storyboard__feature:hover {
+    background: rgba(163, 230, 53, 0.07);
+    border-color: rgba(163, 230, 53, 0.2);
+    transform: translateY(-4px);
   }
 
   .app-storyboard__feature-title {
@@ -560,6 +685,7 @@
     font-size: 1.8rem;
     font-weight: 800;
     letter-spacing: -0.03em;
+    color: var(--story-ink);
   }
 
   .app-storyboard__feature-text {
@@ -569,17 +695,13 @@
     color: var(--story-muted);
   }
 
-  .app-storyboard__section-head {
-    padding-bottom: 2rem;
-    text-align: center;
-  }
-
   .app-storyboard__section-title {
     margin: 0 0 1.2rem;
     font-size: clamp(3.4rem, 4vw, 5rem);
     line-height: 1;
     letter-spacing: -0.05em;
     font-weight: 800;
+    color: var(--story-ink);
   }
 
   .app-storyboard__section-text {
@@ -590,10 +712,6 @@
     color: var(--story-muted);
   }
 
-  .app-storyboard__showcase {
-    padding: 4rem 0 10rem;
-  }
-
   .app-storyboard__row {
     display: grid;
     grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
@@ -602,30 +720,22 @@
     margin-top: 3rem;
     padding: 3rem;
     border-radius: 3.2rem;
-    background: rgba(255, 255, 255, 0.86);
-    border: 1px solid rgba(84, 74, 147, 0.08);
-    box-shadow: 0 22px 50px rgba(15, 17, 34, 0.05);
-  }
-
-  .app-storyboard__row--reverse {
-    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-  }
-
-  .app-storyboard__row--reverse .app-storyboard__screen-col {
-    order: 2;
+    background: rgba(163, 230, 53, 0.03);
+    border: 1px solid rgba(163, 230, 53, 0.08);
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.4);
   }
 
   .app-storyboard__screen-shell {
     padding: 1.6rem;
     border-radius: 2.4rem;
-    background: linear-gradient(180deg, #5c4ea2 0%, #4b417f 100%);
-    box-shadow: 0 24px 50px rgba(84, 74, 147, 0.22);
+    background: linear-gradient(180deg, #1a2e00 0%, #0f1a00 100%);
+    box-shadow: 0 24px 50px rgba(163, 230, 53, 0.1);
   }
 
   .app-storyboard__screen {
     overflow: hidden;
     border-radius: 1.8rem;
-    background: #ffffff;
+    background: #111111;
     min-height: 24rem;
   }
 
@@ -634,12 +744,13 @@
     margin-bottom: 1.6rem;
     padding: 0.8rem 1.4rem;
     border-radius: 999px;
-    background: var(--story-accent-soft);
-    color: var(--story-accent-deep);
+    background: rgba(163, 230, 53, 0.08);
+    color: #a3e635;
     font-size: 1.25rem;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    border: 1px solid rgba(163, 230, 53, 0.2);
   }
 
   .app-storyboard__copy-title {
@@ -649,21 +760,14 @@
     letter-spacing: -0.05em;
     font-weight: 800;
     white-space: pre-line;
+    color: var(--story-ink);
   }
 
   .app-storyboard__copy-label {
     margin: 0 0 1.8rem;
     font-size: 2rem;
-    font-weight: 800;
-    color: var(--story-ink);
-  }
-
-  .app-storyboard__points {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 1.2rem;
+    font-weight: 700;
+    color: var(--story-accent);
   }
 
   .app-storyboard__point {
@@ -683,14 +787,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: var(--story-accent);
-    color: #ffffff;
+    background: rgba(163, 230, 53, 0.15);
+    color: #a3e635;
     font-size: 1.35rem;
     font-weight: 800;
-  }
-
-  .app-storyboard__cta {
-    padding: 0 0 11rem;
+    border: 1px solid rgba(163, 230, 53, 0.3);
   }
 
   .app-storyboard__cta-box {
@@ -698,9 +799,10 @@
     overflow: hidden;
     padding: 5rem;
     border-radius: 3.2rem;
-    background: linear-gradient(135deg, #4f4691 0%, #6356ae 50%, #796ad0 100%);
-    color: #ffffff;
-    box-shadow: 0 30px 60px rgba(63, 52, 120, 0.25);
+    background: linear-gradient(135deg, #0f1a00 0%, #1a2e00 50%, #0a1400 100%);
+    border: 1px solid rgba(163, 230, 53, 0.25);
+    color: #f0f0f0;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
   }
 
   .app-storyboard__cta-box::after {
@@ -711,7 +813,7 @@
     width: 20rem;
     height: 20rem;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(163, 230, 53, 0.06);
   }
 
   .app-storyboard__cta-title {
@@ -722,6 +824,7 @@
     line-height: 1;
     letter-spacing: -0.05em;
     font-weight: 800;
+    color: #a3e635;
   }
 
   .app-storyboard__cta-text {
@@ -731,11 +834,12 @@
     margin: 0 0 2.6rem;
     font-size: 1.7rem;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.84);
+    color: rgba(240, 240, 240, 0.75);
   }
 
   .app-storyboard__cta .app-storyboard__button--secondary {
-    border-color: rgba(255, 255, 255, 0.18);
+    border-color: rgba(163, 230, 53, 0.25);
+    color: #a3e635;
   }
 
   @media screen and (max-width: 1199px) {
@@ -925,29 +1029,29 @@
   <div class="page-width app-storyboard__hero">
     <div class="app-storyboard__hero-grid">
       <div>
-        <span class="app-storyboard__eyebrow">Shopify App Experience</span>
+        <span class="app-storyboard__eyebrow">Shopify App — Account Management</span>
         <h1 class="app-storyboard__hero-title">
-          Build <strong>smart bundles</strong> and grouped product flows that feel clean, fast, and conversion-ready.
+          Give customers <strong>full control</strong> over their account deletion.
         </h1>
         <p class="app-storyboard__hero-text">{{ section.settings.app_description }}</p>
 
         <div class="app-storyboard__hero-actions">
-          <a class="app-storyboard__button app-storyboard__button--primary" href="{{ section.settings.app_url }}">View App Listing</a>
-          <a class="app-storyboard__button app-storyboard__button--secondary" href="#AppStoryboardShowcase">Explore Screens</a>
+          <a class="app-storyboard__button app-storyboard__button--primary" href="{{ section.settings.app_url }}">View on Shopify App Store</a>
+          <a class="app-storyboard__button app-storyboard__button--secondary" href="#AppStoryboardShowcase">See How It Works</a>
         </div>
 
         <div class="app-storyboard__hero-stats">
           <div class="app-storyboard__stat">
-            <span class="app-storyboard__stat-value">Custom</span>
-            <span class="app-storyboard__stat-label">Product options for bundles, groups, and personalized selections</span>
+            <span class="app-storyboard__stat-value" style="color:#a3e635;">1-Click</span>
+            <span class="app-storyboard__stat-label">Customers can delete their account instantly with a single click</span>
           </div>
           <div class="app-storyboard__stat">
-            <span class="app-storyboard__stat-value">Drag & Drop</span>
-            <span class="app-storyboard__stat-label">Merchants can arrange products quickly with a simple backend flow</span>
+            <span class="app-storyboard__stat-value" style="color:#a3e635;">Auto Notify</span>
+            <span class="app-storyboard__stat-label">Admins are automatically notified when an account is deleted</span>
           </div>
           <div class="app-storyboard__stat">
-            <span class="app-storyboard__stat-value">Storefront Ready</span>
-            <span class="app-storyboard__stat-label">Cleaner grouped layouts, quantity controls, and simpler add-to-cart journeys</span>
+            <span class="app-storyboard__stat-value" style="color:#a3e635;">GDPR Ready</span>
+            <span class="app-storyboard__stat-label">Secure, transparent data removal that keeps your store compliant</span>
           </div>
         </div>
       </div>
@@ -968,7 +1072,7 @@
           </span>
           <div>
             <span class="app-storyboard__app-name">{{ section.settings.app_name }}</span>
-            <span class="app-storyboard__app-meta">Custom options, grouped products, and bundle setup for Shopify stores</span>
+            <span class="app-storyboard__app-meta">One-click account deletion for Shopify customers</span>
           </div>
         </div>
 
@@ -986,33 +1090,33 @@
   <div class="page-width app-storyboard__feature-strip">
     <div class="app-storyboard__feature-grid">
       <article class="app-storyboard__feature">
-        <h3 class="app-storyboard__feature-title">Custom Product Options</h3>
-        <p class="app-storyboard__feature-text">Flexible setup for product variants, groups, and bundle-driven selling experiences.</p>
+        <h3 class="app-storyboard__feature-title">Easy Deletion Process</h3>
+        <p class="app-storyboard__feature-text">Customers can delete their account in one click directly from their account page — no admin involvement needed.</p>
       </article>
       <article class="app-storyboard__feature">
-        <h3 class="app-storyboard__feature-title">Product Bundling</h3>
-        <p class="app-storyboard__feature-text">Pair related items together and help merchants increase average order value with cleaner bundles.</p>
+        <h3 class="app-storyboard__feature-title">Automated Notifications</h3>
+        <p class="app-storyboard__feature-text">Store admins receive instant notifications whenever a customer initiates account deletion.</p>
       </article>
       <article class="app-storyboard__feature">
-        <h3 class="app-storyboard__feature-title">Grouped Products</h3>
-        <p class="app-storyboard__feature-text">Show connected products in one structured view so shoppers can select combinations faster.</p>
+        <h3 class="app-storyboard__feature-title">Data Protection Focus</h3>
+        <p class="app-storyboard__feature-text">Secure and transparent account removal process that prioritizes customer data privacy and GDPR compliance.</p>
       </article>
       <article class="app-storyboard__feature">
-        <h3 class="app-storyboard__feature-title">Easy Drag-and-Drop Setup</h3>
-        <p class="app-storyboard__feature-text">Merchants can reorder and organize products without getting stuck in a complicated admin flow.</p>
+        <h3 class="app-storyboard__feature-title">Deletion Reason Tracking</h3>
+        <p class="app-storyboard__feature-text">Customers can optionally share why they're leaving, giving merchants valuable feedback to improve retention.</p>
       </article>
       <article class="app-storyboard__feature">
-        <h3 class="app-storyboard__feature-title">Customizable Display</h3>
-        <p class="app-storyboard__feature-text">A presentation style that can adapt to different storefront needs while staying visually clean.</p>
+        <h3 class="app-storyboard__feature-title">Multilingual Support</h3>
+        <p class="app-storyboard__feature-text">Gold plan members get multilingual access so customers worldwide can use the app in their preferred language.</p>
       </article>
     </div>
   </div>
 
   <div id="AppStoryboardShowcase" class="page-width app-storyboard__showcase">
     <div class="app-storyboard__section-head">
-      <h2 class="app-storyboard__section-title">Designed around real product workflows</h2>
+      <h2 class="app-storyboard__section-title">See the app in action</h2>
       <p class="app-storyboard__section-text">
-        Your provided screens are now presented as structured product stories, so the theme feels more premium and easier to scan for merchants reviewing the app.
+        A complete walkthrough of how ESTS Delete Customer Account works — from the customer-facing deletion flow to the admin dashboard.
       </p>
     </div>
 
@@ -1067,12 +1171,12 @@
 
   <div class="page-width app-storyboard__cta">
     <div class="app-storyboard__cta-box">
-      <h2 class="app-storyboard__cta-title">Give merchants a cleaner way to sell bundled and grouped products.</h2>
+      <h2 class="app-storyboard__cta-title">Empower your customers with account control.</h2>
       <p class="app-storyboard__cta-text">
-        The layout now keeps your theme professional while still supporting the screenshot-driven storytelling you wanted for this app presentation.
+        ESTS Delete Customer Account gives Shopify customers the freedom to delete their own accounts securely — reducing support tickets and building trust.
       </p>
       <div class="app-storyboard__hero-actions">
-        <a class="app-storyboard__button app-storyboard__button--primary" href="{{ section.settings.app_url }}">Open App Listing</a>
+        <a class="app-storyboard__button app-storyboard__button--primary" href="{{ section.settings.app_url }}">Install on Shopify</a>
         <a class="app-storyboard__button app-storyboard__button--secondary" href="#MainContent">Back to Top</a>
       </div>
     </div>
