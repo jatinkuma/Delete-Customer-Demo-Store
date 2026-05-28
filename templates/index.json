@@ -61,7 +61,7 @@
       ],
       "settings": {
         "app_name": "ESTS Delete Customer Account",
-        "app_url": "https://apps.shopify.com/delete-customer-account",
+        "app_url": "https://apps.shopify.com/ests-delete-customer-1",
         "app_description": "Our app enables Shopify customers to effortlessly delete their accounts with just one click, enhancing the user experience. While Shopify administrators already possess the authority to delete customer accounts, our tool extends this functionality directly to the customers themselves — with automated admin notifications and a secure, transparent process.",
         "accent_color": "#a3e635"
       }
