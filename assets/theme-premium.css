@@ -615,3 +615,354 @@ main,
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(163, 230, 53, 0.4);
 }
+
+
+/* ============================================
+   DARK THEME - GLOBAL FIXES
+   Product page, buttons, text visibility
+   ============================================ */
+
+/* Force all pages dark background */
+body,
+.gradient,
+.color-background-1,
+.color-background-2,
+.color-scheme-1,
+.color-scheme-2,
+[class*="color-scheme"],
+.section,
+main,
+.content-for-layout,
+.shopify-section {
+  background-color: #0a0a0a !important;
+  color: #f0f0f0 !important;
+}
+
+/* All headings visible on dark */
+h1, h2, h3, h4, h5, h6,
+.h0, .h1, .h2, .h3, .h4, .h5,
+.product__title h1,
+.product__title h2,
+.card__heading,
+.card__heading a,
+.card__heading .full-unstyled-link,
+.full-unstyled-link {
+  color: #f0f0f0 !important;
+}
+
+/* Product title on product page */
+.product__title,
+.product__title h1,
+.product__info-container h1,
+.product__info-container h2 {
+  color: #f0f0f0 !important;
+}
+
+/* All body text */
+p, span, li, label, .rte,
+.product__description,
+.product__text,
+.product__sku,
+.product__inventory {
+  color: #d1d5db !important;
+}
+
+/* Price text */
+.price,
+.price__regular,
+.price__sale,
+.price-item,
+.price-item--regular,
+.price-item--sale,
+.price__container {
+  color: #f0f0f0 !important;
+}
+
+/* ============================================
+   ADD TO CART BUTTON - LIME GREEN DESIGN
+   ============================================ */
+
+.button,
+.shopify-challenge__button,
+.customer button,
+button.shopify-payment-button__button--unbranded,
+.product-form__submit,
+[name="add"] {
+  background-color: #a3e635 !important;
+  color: #0a0a0a !important;
+  border: none !important;
+  border-radius: 9999px !important;
+  font-weight: 700 !important;
+  font-size: 1.5rem !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 20px rgba(163, 230, 53, 0.25) !important;
+}
+
+.button:hover,
+.shopify-challenge__button:hover,
+.customer button:hover,
+.product-form__submit:hover,
+[name="add"]:hover {
+  background-color: #bef264 !important;
+  color: #0a0a0a !important;
+  box-shadow: 0 8px 30px rgba(163, 230, 53, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Button after/before pseudo elements fix */
+.button::after,
+.button::before,
+.shopify-challenge__button::after,
+.shopify-challenge__button::before {
+  display: none !important;
+}
+
+/* Secondary button */
+.button--secondary {
+  background-color: transparent !important;
+  color: #a3e635 !important;
+  border: 1px solid rgba(163, 230, 53, 0.4) !important;
+  box-shadow: none !important;
+}
+
+.button--secondary:hover {
+  background-color: rgba(163, 230, 53, 0.1) !important;
+  color: #a3e635 !important;
+  border-color: rgba(163, 230, 53, 0.6) !important;
+  box-shadow: none !important;
+  transform: translateY(-2px) !important;
+}
+
+/* ============================================
+   PRODUCT PAGE - FULL DARK THEME
+   ============================================ */
+
+/* Product info wrapper */
+.product,
+.product__info-wrapper,
+.product__info-container,
+.product-info,
+.section-main-product {
+  background-color: #0a0a0a !important;
+  color: #f0f0f0 !important;
+}
+
+/* Product media background */
+.product__media-wrapper,
+.product__media,
+.media,
+.product-media-container {
+  background-color: #111111 !important;
+}
+
+/* Quantity input */
+.quantity,
+.quantity__input,
+.quantity__button {
+  background-color: #1a1a1a !important;
+  color: #f0f0f0 !important;
+  border-color: rgba(163, 230, 53, 0.2) !important;
+}
+
+.quantity__button:hover {
+  background-color: rgba(163, 230, 53, 0.1) !important;
+  color: #a3e635 !important;
+}
+
+/* Form labels */
+.form__label,
+.quantity__label,
+.product-form__input label {
+  color: #9ca3af !important;
+}
+
+/* Variant pills / selectors */
+.variant-pills__input:checked + .variant-pills__label,
+.swatch-input__input:checked + .swatch-input__label {
+  background-color: #a3e635 !important;
+  color: #0a0a0a !important;
+  border-color: #a3e635 !important;
+}
+
+.variant-pills__label,
+.swatch-input__label {
+  background-color: #1a1a1a !important;
+  color: #f0f0f0 !important;
+  border-color: rgba(163, 230, 53, 0.2) !important;
+}
+
+.variant-pills__label:hover,
+.swatch-input__label:hover {
+  border-color: rgba(163, 230, 53, 0.5) !important;
+}
+
+/* ============================================
+   COLLECTION / CATALOG PAGE
+   ============================================ */
+
+.collection,
+.main-collection-product-grid,
+.collection-hero,
+.section-collection-template {
+  background-color: #0a0a0a !important;
+}
+
+/* Collection title */
+.collection-hero__title,
+.collection__title,
+.collection-hero .title {
+  color: #f0f0f0 !important;
+}
+
+/* Product card on collection page */
+.card-wrapper,
+.product-card-wrapper {
+  background-color: #111111 !important;
+  border-color: rgba(163, 230, 53, 0.1) !important;
+}
+
+.card__heading,
+.card__heading a,
+.card__heading .full-unstyled-link,
+.card .card__heading {
+  color: #f0f0f0 !important;
+}
+
+/* Card info section */
+.card__info,
+.card-information,
+.card-information__text,
+.card-information > * {
+  background-color: #111111 !important;
+  color: #f0f0f0 !important;
+}
+
+/* Price on cards */
+.card .price,
+.card-information .price,
+.price-item {
+  color: #a3e635 !important;
+}
+
+/* ============================================
+   NAVIGATION / BREADCRUMBS
+   ============================================ */
+
+.breadcrumbs,
+.breadcrumbs__item,
+.breadcrumbs a {
+  color: #9ca3af !important;
+}
+
+/* ============================================
+   FOOTER DARK
+   ============================================ */
+
+.footer,
+.footer-section,
+.shopify-section-group-footer-group {
+  background-color: #0d0d0d !important;
+  border-top: 1px solid rgba(163, 230, 53, 0.1) !important;
+  color: #9ca3af !important;
+}
+
+.footer__heading {
+  color: #f0f0f0 !important;
+}
+
+.footer a,
+.footer__list a {
+  color: #9ca3af !important;
+}
+
+.footer a:hover,
+.footer__list a:hover {
+  color: #a3e635 !important;
+}
+
+/* ============================================
+   INPUTS & FORMS - DARK
+   ============================================ */
+
+input,
+textarea,
+select,
+.field__input,
+.select__select {
+  background-color: #1a1a1a !important;
+  color: #f0f0f0 !important;
+  border-color: rgba(163, 230, 53, 0.2) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+.field__input:focus {
+  border-color: rgba(163, 230, 53, 0.5) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(163, 230, 53, 0.1) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #555 !important;
+}
+
+/* ============================================
+   ANNOUNCEMENT BAR
+   ============================================ */
+
+.announcement-bar,
+.announcement-bar__message {
+  background-color: rgba(163, 230, 53, 0.08) !important;
+  color: #a3e635 !important;
+  border-bottom: 1px solid rgba(163, 230, 53, 0.15) !important;
+}
+
+/* ============================================
+   CART DRAWER / NOTIFICATION
+   ============================================ */
+
+.cart-drawer,
+.cart-notification,
+.cart-notification__wrapper {
+  background-color: #111111 !important;
+  color: #f0f0f0 !important;
+  border-color: rgba(163, 230, 53, 0.15) !important;
+}
+
+.cart-notification__heading,
+.cart-drawer__header h2 {
+  color: #f0f0f0 !important;
+}
+
+/* ============================================
+   PAGINATION
+   ============================================ */
+
+.pagination__item,
+.pagination__item a {
+  color: #9ca3af !important;
+  border-color: rgba(163, 230, 53, 0.15) !important;
+}
+
+.pagination__item--current {
+  background-color: #a3e635 !important;
+  color: #0a0a0a !important;
+}
+
+/* ============================================
+   FACETS / FILTERS
+   ============================================ */
+
+.facets,
+.facets__wrapper,
+.facet-filters {
+  background-color: #0a0a0a !important;
+  color: #f0f0f0 !important;
+}
+
+.facets__heading,
+.facet-filters__label {
+  color: #f0f0f0 !important;
+}
