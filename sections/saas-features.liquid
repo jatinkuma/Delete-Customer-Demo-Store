@@ -1,14 +1,14 @@
 {%- style -%}
   .saas-features {
     padding: var(--space-12) 0 !important;
-    background: #ffffff !important;
+    background: var(--surface-0) !important;
   }
   .saas-features .collection__title {
     margin-bottom: 64px !important;
   }
   .saas-features .section-label {
     display: block;
-    color: #6366f1 !important;
+    color: var(--color-brand-1) !important;
     font-size: 14px !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
@@ -27,11 +27,11 @@
     gap: 32px !important;
   }
   .saas-feature-card {
-    background: #ffffff !important;
-    border: 1px solid #f1f5f9 !important;
+    background: var(--surface-1) !important;
+    border: 1px solid rgba(163, 230, 53, 0.12) !important;
     border-radius: 20px !important;
     padding: 32px !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02) !important;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4) !important;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
     text-align: left !important;
     display: flex !important;
@@ -41,20 +41,21 @@
   }
   .saas-feature-card:hover {
     transform: translateY(-8px) !important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05) !important;
-    border-color: #e2e8f0 !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(163, 230, 53, 0.2) !important;
+    border-color: rgba(163, 230, 53, 0.3) !important;
   }
   .saas-feature-icon {
-    width: 48px !important;
-    height: 48px !important;
-    background: #f5f3ff !important;
-    border-radius: 12px !important;
+    width: 52px !important;
+    height: 52px !important;
+    background: rgba(163, 230, 53, 0.1) !important;
+    border-radius: 14px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     margin-bottom: 24px !important;
-    color: #6366f1 !important;
+    color: #a3e635 !important;
     flex-shrink: 0 !important;
+    border: 1px solid rgba(163, 230, 53, 0.2) !important;
   }
   .saas-feature-title {
     font-size: 18px !important;
@@ -84,41 +85,41 @@
 <section class="saas-features">
   <div class="page-width">
     <div class="collection__title center">
-      <span class="section-label">Features</span>
-      <h2 class="title">Everything you need to grow</h2>
+      <span class="section-label">App Features</span>
+      <h2 class="title">Everything ESTS Delete Customer Account offers</h2>
     </div>
 
     <div class="saas-features-grid">
       <div class="saas-feature-card">
         <div class="saas-feature-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
         </div>
-        <h3 class="saas-feature-title">Lightning Fast Setup</h3>
-        <p class="saas-feature-text">Install and go live in under 2 minutes. No coding required, no complex configurations.</p>
+        <h3 class="saas-feature-title">Easy Deletion Process</h3>
+        <p class="saas-feature-text">Customers can delete their Shopify account in just one click — directly from their account page. No admin involvement, no friction.</p>
       </div>
 
       <div class="saas-feature-card">
         <div class="saas-feature-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
         </div>
-        <h3 class="saas-feature-title">Smart Analytics</h3>
-        <p class="saas-feature-text">Real-time insights into your store performance with actionable recommendations.</p>
-      </div>
-
-      <div class="saas-feature-card">
-        <div class="saas-feature-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
-        </div>
-        <h3 class="saas-feature-title">Fully Customizable</h3>
-        <p class="saas-feature-text">Match your brand perfectly with flexible design controls and theme integration.</p>
+        <h3 class="saas-feature-title">Automated Notifications</h3>
+        <p class="saas-feature-text">Store admins are automatically notified whenever a customer deletes their account — keeping you informed without manual checks.</p>
       </div>
 
       <div class="saas-feature-card">
         <div class="saas-feature-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
         </div>
-        <h3 class="saas-feature-title">Enterprise Security</h3>
-        <p class="saas-feature-text">Bank-level encryption and GDPR compliance. Your data is always safe with us.</p>
+        <h3 class="saas-feature-title">Data Protection Focus</h3>
+        <p class="saas-feature-text">Secure and transparent account removal process that prioritizes customer data privacy and keeps your store GDPR compliant.</p>
+      </div>
+
+      <div class="saas-feature-card">
+        <div class="saas-feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+        </div>
+        <h3 class="saas-feature-title">Multilingual Support</h3>
+        <p class="saas-feature-text">Gold plan members get multilingual access so customers worldwide can use the app in their preferred language.</p>
       </div>
     </div>
   </div>
@@ -129,63 +130,10 @@
   "name": "SaaS Features",
   "tag": "section",
   "class": "section",
-  "settings": [
-    {
-      "type": "inline_richtext",
-      "id": "title",
-      "default": "Built for Modern Merchants",
-      "label": "Heading"
-    },
-    {
-      "type": "select",
-      "id": "heading_size",
-      "options": [
-        { "value": "h2", "label": "Small" },
-        { "value": "h1", "label": "Medium" },
-        { "value": "h0", "label": "Large" }
-      ],
-      "default": "h1",
-      "label": "Heading size"
-    },
-    {
-      "type": "richtext",
-      "id": "description",
-      "label": "Description"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "feature",
-      "name": "Feature",
-      "settings": [
-        {
-          "type": "html",
-          "id": "icon_svg",
-          "label": "Icon SVG (Optional)"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "default": "Feature Title",
-          "label": "Title"
-        },
-        {
-          "type": "textarea",
-          "id": "text",
-          "default": "Explain how this feature helps your customers achieve their goals.",
-          "label": "Description"
-        }
-      ]
-    }
-  ],
+  "settings": [],
   "presets": [
     {
-      "name": "SaaS Features",
-      "blocks": [
-        { "type": "feature" },
-        { "type": "feature" },
-        { "type": "feature" }
-      ]
+      "name": "SaaS Features"
     }
   ]
 }

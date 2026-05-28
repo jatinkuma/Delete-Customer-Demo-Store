@@ -16,55 +16,40 @@
           "type": "slide",
           "settings": {
             "media_position": "right",
-            "eyebrow": "Admin flow",
-            "title": "Bundle Product",
-            "label": "App Features:",
-            "points": "Add & customize product options easily.\nCreate either bundle or group products.\nSearch, add, delete, and reorder products.\nSet default selections.\nLet customers adjust quantities.",
-            "image": "shopify://shop_images/Bundle_Product.png"
+            "eyebrow": "Customer Flow",
+            "title": "One-Click Account Deletion",
+            "label": "How it works for customers:",
+            "points": "Customer visits their account page.\nClicks the 'Delete Account' button.\nA confirmation modal appears.\nCustomer selects a reason for leaving.\nAccount is securely deleted instantly."
           }
         },
         "slide_2": {
           "type": "slide",
           "settings": {
             "media_position": "left",
-            "eyebrow": "Storefront",
-            "title": "Group Product -Storefront",
-            "label": "",
-            "points": "Showcase related products together.\nEasily change item quantities.\nReal-time price updates.\nAdd all selected items in one click.",
-            "image": "shopify://shop_images/Group_Product-_Storefront.png"
+            "eyebrow": "Admin Dashboard",
+            "title": "Deleted Customers List",
+            "label": "What admins can see:",
+            "points": "View all deleted customer IDs.\nSee the reason each customer provided.\nTrack deletion history with timestamps.\nUse insights to improve retention.\nExport data for reporting."
           }
         },
         "slide_3": {
           "type": "slide",
           "settings": {
             "media_position": "right",
-            "eyebrow": "Admin flow",
-            "title": "Group Product",
-            "label": "",
-            "points": "Quickly add and configure product options in the app backend.\nCreate either a group product or a bundle product, not both for the same set.\nSearch, select, add, delete, and reorder products with ease.\nArrange items using drag-and-drop functionality.",
-            "image": "shopify://shop_images/Group_Product.png"
+            "eyebrow": "App Configuration",
+            "title": "Configure in Minutes",
+            "label": "Customization options:",
+            "points": "Enable or disable the delete button anytime.\nChoose your custom button color.\nAdd custom CSS for full brand control.\nSet up automated admin notifications.\nMultilingual support for global stores."
           }
         },
         "slide_4": {
           "type": "slide",
           "settings": {
-            "media_position": "right",
-            "eyebrow": "Cart experience",
-            "title": "Bundle Product -Cart Page",
-            "label": "",
-            "points": "",
-            "image": "shopify://shop_images/Bundle_Product_-_Cart_Page.png"
-          }
-        },
-        "slide_5": {
-          "type": "slide",
-          "settings": {
             "media_position": "left",
-            "eyebrow": "Cart experience",
-            "title": "Group Product -Cart Page",
-            "label": "",
-            "points": "",
-            "image": "shopify://shop_images/Group_Product_-_Cart_Page.png"
+            "eyebrow": "Multilingual",
+            "title": "Speak the World",
+            "label": "Gold Plan feature:",
+            "points": "Support customers in their native language.\nRequest new language additions anytime.\nSeamless localization for global stores.\nAvailable exclusively for Gold plan members."
           }
         }
       },
@@ -72,14 +57,13 @@
         "slide_1",
         "slide_2",
         "slide_3",
-        "slide_4",
-        "slide_5"
+        "slide_4"
       ],
       "settings": {
-        "app_name": "ESTS Smart Product Bundler",
-        "app_url": "https://apps.shopify.com/advanced-product-options-1",
-        "app_description": "Easily create custom product options for your store with the Group & Bundle Product app. The app helps merchants build bundled products, grouped selections, and personalized choices with a simple drag-and-drop workflow.",
-        "accent_color": "#544a93"
+        "app_name": "ESTS Delete Customer Account",
+        "app_url": "https://apps.shopify.com/delete-customer-account",
+        "app_description": "Our app enables Shopify customers to effortlessly delete their accounts with just one click, enhancing the user experience. While Shopify administrators already possess the authority to delete customer accounts, our tool extends this functionality directly to the customers themselves — with automated admin notifications and a secure, transparent process.",
+        "accent_color": "#a3e635"
       }
     }
   },

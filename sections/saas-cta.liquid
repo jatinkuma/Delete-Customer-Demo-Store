@@ -1,17 +1,18 @@
 {%- style -%}
   .saas-cta {
     padding: var(--space-12) 0 !important;
-    background: #ffffff !important;
+    background: var(--surface-0) !important;
   }
   .saas-cta-container {
-    background: var(--gradient-vibrant) !important;
+    background: linear-gradient(135deg, #0f1a00 0%, #1a2e00 50%, #0a1400 100%) !important;
+    border: 1px solid rgba(163, 230, 53, 0.3) !important;
     border-radius: 40px !important;
     padding: 100px 40px !important;
     margin: 0 40px !important;
     text-align: center !important;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 20px 50px rgba(99, 102, 241, 0.2) !important;
+    box-shadow: 0 20px 60px rgba(163, 230, 53, 0.08), 0 0 0 1px rgba(163, 230, 53, 0.05) !important;
   }
   .saas-cta-container::before {
     content: '';
@@ -20,11 +21,11 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 60%);
+    background: radial-gradient(circle at center, rgba(163, 230, 53, 0.06), transparent 60%);
     pointer-events: none;
   }
   .saas-cta-heading {
-    color: #ffffff !important;
+    color: #a3e635 !important;
     font-size: 56px !important;
     font-weight: 800 !important;
     letter-spacing: -0.04em !important;
@@ -34,7 +35,7 @@
     z-index: 2;
   }
   .saas-cta-text {
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: rgba(240, 240, 240, 0.8) !important;
     font-size: 20px !important;
     max-width: 600px !important;
     margin: 0 auto 48px !important;
@@ -43,9 +44,9 @@
     z-index: 2;
   }
   .button--cta {
-    background: #ffffff !important;
-    color: #6366f1 !important;
-    border-radius: var(--radius-pill) !important;
+    background: #a3e635 !important;
+    color: #0a0a0a !important;
+    border-radius: 9999px !important;
     padding: 20px 48px !important;
     font-weight: 700 !important;
     font-size: 18px !important;
@@ -53,13 +54,15 @@
     display: inline-flex !important;
     align-items: center !important;
     gap: 12px !important;
-    transition: var(--transition-spring) !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
     position: relative;
     z-index: 2;
+    box-shadow: 0 8px 30px rgba(163, 230, 53, 0.3) !important;
   }
   .button--cta:hover {
     transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 16px 40px rgba(163, 230, 53, 0.45) !important;
+    background: #bef264 !important;
   }
   @media screen and (max-width: 749px) {
     .saas-cta-container {
@@ -75,11 +78,10 @@
 <section class="saas-cta">
   <div class="page-width">
     <div class="saas-cta-container">
-      <h2 class="saas-cta-heading">Ready to grow your store?</h2>
-      <p class="saas-cta-text">Join merchants already using 
-Ests Product Inquire Pro to drive more sales and automate growth.</p>
-      <a href="https://apps.shopify.com/advanced-product-options-1" class="button--cta">
-        Start Free Trial <span>→</span>
+      <h2 class="saas-cta-heading">Empower your customers today.</h2>
+      <p class="saas-cta-text">Install ESTS Delete Customer Account and give your Shopify customers the freedom to manage their own data — securely, transparently, and in one click.</p>
+      <a href="https://apps.shopify.com/delete-customer-account" class="button--cta">
+        Install Free on Shopify <span>→</span>
       </a>
     </div>
   </div>
@@ -90,31 +92,6 @@ Ests Product Inquire Pro to drive more sales and automate growth.</p>
   "name": "SaaS CTA Section",
   "tag": "section",
   "class": "section",
-  "settings": [
-    {
-      "type": "inline_richtext",
-      "id": "title",
-      "default": "Ready to Transform Your Store?",
-      "label": "Heading"
-    },
-    {
-      "type": "textarea",
-      "id": "text",
-      "default": "Join 2,000+ Shopify Plus merchants scaling their business with our premium solution.",
-      "label": "Description"
-    },
-    {
-      "type": "text",
-      "id": "button_label",
-      "default": "Start Free Trial",
-      "label": "Button Label"
-    },
-    {
-      "type": "url",
-      "id": "button_link",
-      "label": "Button Link"
-    }
-  ],
   "presets": [
     {
       "name": "SaaS CTA Section"
